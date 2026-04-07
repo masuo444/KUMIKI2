@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- TOP -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/index_ja.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index_ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/index.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index_ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/index.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index_ja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/index.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- NECKLACE -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/necklace.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/necklace.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/necklace.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/necklace.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/necklace.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/necklace.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/necklace.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- EARRINGS -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/earrings.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/earrings.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/earrings.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/earrings.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/earrings.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/earrings.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/earrings.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- KANZASHI -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/kanzashi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/kanzashi.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/kanzashi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/kanzashi.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/kanzashi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/kanzashi.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/kanzashi.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- BESPOKE -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/bespoke.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/bespoke.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/bespoke.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/bespoke.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/bespoke.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/bespoke.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/bespoke.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- BADGE -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/badge.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/badge.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/badge.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/badge.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/badge.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/badge.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/badge.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- GIFT -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/gift.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/gift.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/gift.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/gift.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/gift.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/gift.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/gift.html"/>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

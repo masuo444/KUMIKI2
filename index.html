@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUMIKI — A Piece of Japan You Can Wear</title>
+  <meta name="description" content="KUMIKI creates the world's smallest masu jewelry — wearable art born from 1,300 years of Japanese tradition. Necklaces, earrings, and kanzashi crafted from hinoki cypress.">
+  <meta name="keywords" content="Japanese jewelry, masu jewelry, hinoki cypress, artisan jewelry, sustainable luxury, wabi-sabi, Japanese craftsmanship">
+
+  <!-- OGP -->
+  <meta property="og:title" content="KUMIKI — A Piece of Japan You Can Wear">
+  <meta property="og:description" content="The world's smallest masu, reimagined as wearable art. Born from 1,300 years of Japanese tradition.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kumiki.fomusglobal.com/">
+  <meta property="og:image" content="https://kumiki.fomusglobal.com/IMG_6538.JPG">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="KUMIKI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KUMIKI — A Piece of Japan You Can Wear">
+  <meta name="twitter:description" content="The world's smallest masu, reimagined as wearable art. Born from 1,300 years of Japanese tradition.">
+  <meta name="twitter:image" content="https://kumiki.fomusglobal.com/IMG_6538.JPG">
+
+  <link rel="canonical" href="https://kumiki.fomusglobal.com/">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/index.html" />
+  <link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index_ja.html" />
+  <link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/index.html" />
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://kumiki.fomusglobal.com/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════
+       DESIGN TOKENS
+       ═══════════════════════════════════════════ */
+    :root {
+      --gold: #C9A86C;
+      --gold-light: #D4B87C;
+      --gold-dark: #A68B5B;
+      --charcoal: #1A1A1A;
+      --ink: #0A0A0A;
+      --ivory: #FAF9F7;
+      --stone: #F5F4F2;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════════ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection { background-color: var(--gold); color: white; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--ivory); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+
+    a { text-decoration: none; color: inherit; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ═══════════════════════════════════════════
+       UTILITIES
+       ═══════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 48px;
+    }
+
+    .gold-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto;
+      opacity: 0.5;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 56px;
+      border: 1px solid rgba(201, 168, 108, 0.4);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: all 0.5s;
+      background: none;
+    }
+
+    .cta-btn:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: white;
+    }
+
+    .cta-btn--light {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .cta-btn--light:hover {
+      border-color: var(--gold);
+      background: var(--gold);
+      color: white;
+    }
+
+    /* ═══════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 28px 32px;
+      transition: all 0.6s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 18px 32px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.35em;
+      color: rgba(255, 255, 255, 0.9);
+      transition: color 0.5s;
+    }
+
+    .nav.scrolled .nav-logo { color: var(--charcoal); }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 48px;
+    }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+    }
+
+    .nav-links a {
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .nav.scrolled .nav-links a { color: #999; }
+    .nav-links a:hover { color: white; }
+    .nav.scrolled .nav-links a:hover { color: var(--charcoal); }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.5s ease;
+      opacity: 0.3;
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-menu-btn {
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      transition: color 0.5s;
+    }
+
+    .nav.scrolled .nav-menu-btn { color: var(--charcoal); }
+
+    @media (min-width: 1024px) {
+      .nav-menu-btn { display: none; }
+    }
+
+    .nav-menu-btn svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: var(--ivory);
+      z-index: 200;
+      transform: translateX(-100%);
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-menu.open { transform: translateX(0); }
+
+    .mobile-menu-header {
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .mobile-menu-header span {
+      font-size: 9px;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+    }
+
+    .mobile-menu-close svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--charcoal);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .mobile-menu-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+      gap: 36px;
+    }
+
+    .mobile-menu-body a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.15em;
+      color: var(--charcoal);
+      transition: color 0.3s;
+    }
+
+    .mobile-menu-body a:hover { color: var(--gold); }
+
+    /* ═══════════════════════════════════════════
+       S1: HERO — "A Piece of Japan You Can Wear."
+       No mention of "masu" yet. Pure intrigue.
+       ═══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+
+    @media (min-width: 768px) {
+      .hero-bg img {
+        opacity: 0.65;
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 4.5vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .hero-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+      font-weight: 400;
+      letter-spacing: 0.45em;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    .hero-scroll {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      animation: hero-pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes hero-pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.7; }
+    }
+
+    /* ═══════════════════════════════════════════
+       S2: WHAT IS THIS? — Curiosity
+       ═══════════════════════════════════════════ */
+    .curiosity {
+      padding: 140px 24px;
+      text-align: center;
+      background: var(--ivory);
+    }
+
+    @media (min-width: 768px) {
+      .curiosity { padding: 200px 24px; }
+    }
+
+    .curiosity-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .curiosity-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      color: #555;
+      line-height: 2.4;
+      margin-bottom: 80px;
+    }
+
+    .curiosity-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .curiosity-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    .curiosity-img {
+      overflow: hidden;
+      background: var(--stone);
+    }
+
+    .curiosity-img img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .curiosity-img:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ═══════════════════════════════════════════
+       S3: THE MASU — First reveal of the story
+       ═══════════════════════════════════════════ */
+    .masu-story {
+      padding: 140px 24px;
+      background: white;
+    }
+
+    @media (min-width: 768px) {
+      .masu-story { padding: 200px 24px; }
+    }
+
+    .masu-story-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .masu-story-header {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .masu-story-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--charcoal);
+      margin-bottom: 28px;
+      text-transform: uppercase;
+    }
+
+    .masu-story-subtitle {
+      font-size: 12px;
+      letter-spacing: 0.25em;
+      color: #999;
+      font-weight: 400;
+    }
+
+    .masu-story-body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .masu-story-body {
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+      }
+    }
+
+    .masu-story-visual {
+      overflow: hidden;
+      background: var(--stone);
+    }
+
+    .masu-story-visual img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+
+    .masu-story-content {
+      max-width: 440px;
+    }
+
+    .masu-story-text {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 300;
+      color: #555;
+      line-height: 2.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       S4: WEAR IT. DISPLAY IT. — Duality
+       ═══════════════════════════════════════════ */
+    .duality {
+      padding: 140px 24px;
+      background: var(--ink);
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .duality { padding: 200px 24px; }
+    }
+
+    .duality-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .duality-header {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .duality-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
+    }
+
+    .duality-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .duality-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .duality-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    .duality-card {
+      text-align: center;
+    }
+
+    .duality-card-img {
+      overflow: hidden;
+      margin-bottom: 36px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .duality-card-img img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      opacity: 0.9;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .duality-card:hover .duality-card-img img {
+      transform: scale(1.03);
+    }
+
+    .duality-card-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 16px;
+    }
+
+    .duality-card-desc {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 2;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /* ═══════════════════════════════════════════
+       S5: COLLECTIONS — No prices
+       ═══════════════════════════════════════════ */
+    .collections {
+      padding: 140px 24px;
+      background: white;
+    }
+
+    @media (min-width: 768px) {
+      .collections { padding: 200px 24px; }
+    }
+
+    .collections-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .collections-header {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .collections-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    @media (min-width: 640px) {
+      .collections-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .collections-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .product-card { cursor: pointer; }
+
+    .product-card-img {
+      overflow: hidden;
+      background: var(--stone);
+      margin-bottom: 28px;
+      position: relative;
+    }
+
+    .product-card-img img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .product-card:hover .product-card-img img {
+      transform: scale(1.03);
+    }
+
+    .product-card-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color 0.8s ease;
+      pointer-events: none;
+    }
+
+    .product-card:hover .product-card-img::after {
+      border-color: rgba(201, 168, 108, 0.25);
+    }
+
+    .product-card-info { text-align: center; }
+
+    .product-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .product-card-type {
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .product-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+      transition: color 0.3s;
+    }
+
+    .product-card-link:hover { color: var(--charcoal); }
+
+    .product-card-link svg {
+      width: 12px;
+      height: 12px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    /* ═══════════════════════════════════════════
+       S6: THE 1,300-YEAR CIRCLE — Sustainability
+       ═══════════════════════════════════════════ */
+    .circle {
+      padding: 140px 24px;
+      background: var(--ivory);
+    }
+
+    @media (min-width: 768px) {
+      .circle { padding: 200px 24px; }
+    }
+
+    .circle-inner {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .circle-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .circle-text {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      font-weight: 300;
+      color: #666;
+      line-height: 2.6;
+    }
+
+    /* ═══════════════════════════════════════════
+       S7: ONLY 30 — Scarcity
+       ═══════════════════════════════════════════ */
+    .scarcity {
+      padding: 160px 24px;
+      background: var(--ink);
+      text-align: center;
+      color: white;
+    }
+
+    @media (min-width: 768px) {
+      .scarcity { padding: 240px 24px; }
+    }
+
+    .scarcity-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .scarcity-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 40px;
+    }
+
+    .scarcity-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      line-height: 2;
+      margin-bottom: 16px;
+    }
+
+    .scarcity-sub {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 2;
+    }
+
+    /* ═══════════════════════════════════════════
+       S8: ATELIER LIST — Waiting list
+       ═══════════════════════════════════════════ */
+    .atelier-list {
+      padding: 140px 24px;
+      background: var(--stone);
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .atelier-list { padding: 200px 24px; }
+    }
+
+    .atelier-list-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .atelier-list-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .atelier-list-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: #888;
+      line-height: 2;
+      margin-bottom: 48px;
+    }
+
+    .atelier-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 640px) {
+      .atelier-form {
+        flex-direction: row;
+      }
+    }
+
+    .atelier-form input {
+      flex: 1;
+      padding: 18px 24px;
+      border: 1px solid rgba(201, 168, 108, 0.3);
+      background: white;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .atelier-form input::placeholder {
+      color: #bbb;
+    }
+
+    .atelier-form input:focus {
+      border-color: var(--gold);
+    }
+
+    .atelier-form button {
+      padding: 18px 36px;
+      background: var(--charcoal);
+      color: white;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      border: 1px solid var(--charcoal);
+      cursor: pointer;
+      transition: all 0.4s;
+    }
+
+    .atelier-form button:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════
+       S9: INQUIRE — Contact form
+       ═══════════════════════════════════════════ */
+    .inquire {
+      padding: 140px 24px;
+      background: white;
+    }
+
+    @media (min-width: 768px) {
+      .inquire { padding: 200px 24px; }
+    }
+
+    .inquire-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .inquire-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .inquire-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .inquire-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: #888;
+      line-height: 2;
+      font-style: italic;
+    }
+
+    .inquire-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .inquire-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+      .inquire-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .inquire-field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .inquire-field label {
+      font-size: 9px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .inquire-field input,
+    .inquire-field select,
+    .inquire-field textarea {
+      padding: 16px 20px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background: var(--ivory);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+    }
+
+    .inquire-field input:focus,
+    .inquire-field select:focus,
+    .inquire-field textarea:focus {
+      border-color: var(--gold);
+    }
+
+    .inquire-field textarea {
+      min-height: 140px;
+      resize: vertical;
+      line-height: 1.8;
+    }
+
+    .inquire-field select {
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='1.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .inquire-submit {
+      align-self: center;
+      margin-top: 16px;
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ */
+    .footer {
+      padding: 80px 24px 60px;
+      background: var(--ink);
+      text-align: center;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.35em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 24px;
+    }
+
+    .footer-social {
+      margin-bottom: 32px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      transition: color 0.3s;
+    }
+
+    .footer-social a:hover {
+      color: var(--gold);
+    }
+
+    .footer-social a svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .footer-location {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: rgba(255, 255, 255, 0.25);
+      margin-bottom: 8px;
+    }
+
+    .footer-contact {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.2);
+      margin-bottom: 48px;
+    }
+
+    .footer-contact a {
+      color: rgba(255, 255, 255, 0.3);
+      transition: color 0.3s;
+    }
+
+    .footer-contact a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.12);
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">KUMIKI</a>
+      <ul class="nav-links">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#inquire">Inquire</a></li>
+      </ul>
+      <button class="nav-menu-btn" onclick="openMenu()" aria-label="Open menu">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <span>MENU</span>
+      <button class="mobile-menu-close" onclick="closeMenu()" aria-label="Close menu">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <a href="#story" onclick="closeMenu()">Story</a>
+      <a href="#collections" onclick="closeMenu()">Collections</a>
+      <a href="#inquire" onclick="closeMenu()">Inquire</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       S1: HERO
+       "A Piece of Japan You Can Wear."
+       No masu. No explanation. Just beauty and intrigue.
+       ═══════════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-bg">
+      <!-- Replace with your best product hero shot -->
+      <img src="https://kumiki.fomusglobal.com/IMG_6538.JPG" alt="KUMIKI Jewelry">
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-tagline">A Piece of Japan<br>You Can Wear.</h1>
+      <p class="hero-brand">KUMIKI</p>
+      <span class="hero-scroll">Scroll to discover</span>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════
+       S2: WHAT IS THIS? — Curiosity
+       Close-up shots. Minimal text. "What is this?"
+       ═══════════════════════════════════════════ -->
+  <section class="curiosity" id="curiosity">
+    <div class="curiosity-inner">
+      <div class="reveal">
+        <span class="section-label">The Maison</span>
+        <p class="curiosity-text">
+          A jewel carved from a single block of Japanese hinoki cypress.<br>
+          The world's smallest expression of a 1,300-year-old sacred form.
+        </p>
+      </div>
+      <div class="curiosity-gallery reveal">
+        <!-- Replace with close-up product shots -->
+        <div class="curiosity-img">
+          <img src="https://kumiki.fomusglobal.com/%E5%A4%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG" alt="Close-up detail of KUMIKI jewelry">
+        </div>
+        <div class="curiosity-img">
+          <img src="https://kumiki.fomusglobal.com/%E6%A3%AE%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG" alt="Close-up detail of KUMIKI craftsmanship">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S3: THE MASU — The story reveal
+       Now we name it. The masu. 1,300 years.
+       ═══════════════════════════════════════════ -->
+  <section class="masu-story" id="story">
+    <div class="masu-story-inner">
+      <div class="masu-story-header reveal">
+        <span class="section-label">The Origin</span>
+        <h2 class="masu-story-title">Masu</h2>
+        <p class="masu-story-subtitle">THE SACRED VESSEL OF JAPAN</p>
+      </div>
+
+      <div class="masu-story-body">
+        <div class="masu-story-visual reveal">
+          <!-- Replace with traditional masu vs. jewelry masu comparison image -->
+          <img src="https://kumiki.fomusglobal.com/MASU%20TOP.jpg" alt="The Masu — from traditional vessel to jewelry">
+        </div>
+        <div class="masu-story-content reveal">
+          <span class="section-label">1,300 Years of Meaning</span>
+          <p class="masu-story-text">
+            For over thirteen centuries, the masu has held a sacred place in Japanese life. Originally a measure for rice, it evolved into a vessel for ceremony, celebration, and prayer.
+            <br><br>
+            KUMIKI transforms this ancient form into the world's smallest masu — a piece of wearable art, just two centimeters across, carved from hinoki cypress and adorned with precious metals and traditional Japanese glass.
+            <br><br>
+            Each piece is sealed with a glass coating that preserves the natural grain of the wood forever.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S4: WEAR IT. DISPLAY IT. — The duality
+       Two ways to enjoy. 365 days of value.
+       ═══════════════════════════════════════════ -->
+  <section class="duality" id="duality">
+    <div class="duality-inner">
+      <div class="duality-header reveal">
+        <span class="section-label" style="color: var(--gold);">Two Lives, One Piece</span>
+        <h2 class="duality-title"><em>Wear it.</em> &nbsp; <em>Display it.</em></h2>
+      </div>
+
+      <div class="duality-grid">
+        <div class="duality-card reveal">
+          <div class="duality-card-img">
+            <!-- Replace with wearing/lifestyle shot -->
+            <img src="https://kumiki.fomusglobal.com/%E5%A4%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG" alt="Wearing KUMIKI jewelry">
+          </div>
+          <h3 class="duality-card-label">Wear</h3>
+          <p class="duality-card-desc">
+            A necklace, earrings, or kanzashi that carries the quiet weight of Japanese heritage. Worn against skin, it becomes part of your story.
+          </p>
+        </div>
+
+        <div class="duality-card reveal">
+          <div class="duality-card-img">
+            <!-- Replace with display case / interior shot -->
+            <img src="https://kumiki.fomusglobal.com/MASU%20TOP.jpg" alt="KUMIKI display masu case">
+          </div>
+          <h3 class="duality-card-label">Display</h3>
+          <p class="duality-card-desc">
+            Every piece comes with a handcrafted display masu case. When you're not wearing it, it becomes an object of art in your home.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S5: COLLECTIONS — No prices shown
+       ═══════════════════════════════════════════ -->
+  <section class="collections" id="collections">
+    <div class="collections-inner">
+      <div class="collections-header reveal">
+        <span class="section-label">Collections</span>
+        <h2 class="collections-title">The Collection</h2>
+      </div>
+
+      <div class="collections-grid">
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kumiki.fomusglobal.com/%E5%A4%A9%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG" alt="MASU Necklace">
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-card-name">Necklace</h3>
+            <span class="product-card-type">Flagship Collection</span>
+            <a href="#inquire" class="product-card-link">
+              Inquire
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kumiki.fomusglobal.com/%E6%A3%AE%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG" alt="MASU Earrings">
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-card-name">Earrings</h3>
+            <span class="product-card-type">10+ Variations</span>
+            <a href="#inquire" class="product-card-link">
+              Inquire
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kumiki.fomusglobal.com/IMG_6532.JPG" alt="Kanzashi — Japanese Hair Pin">
+          </div>
+          <div class="product-card-info">
+            <h3 class="product-card-name">Kanzashi</h3>
+            <span class="product-card-type">Japanese Hair Pin</span>
+            <a href="#inquire" class="product-card-link">
+              Inquire
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S6: THE 1,300-YEAR CIRCLE — Sustainability
+       Quiet. Not preachy. Just the truth.
+       ═══════════════════════════════════════════ -->
+  <section class="circle" id="circle">
+    <div class="circle-inner reveal">
+      <span class="section-label">Sustainability</span>
+      <h2 class="circle-title">The 1,300-Year Circle</h2>
+      <div class="gold-divider" style="margin-bottom: 48px;"></div>
+      <p class="circle-text">
+        The hinoki cypress used in our masu is harvested from sustainably managed forests in Japan's heartland.
+        <br><br>
+        For every tree used, new saplings are planted — continuing a cycle of cultivation that has endured for over a millennium. A portion of each purchase supports forestry education programs in rural Japan.
+        <br><br>
+        When you hold a KUMIKI piece, you hold a fragment of a living forest.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S7: ONLY 30 — Scarcity
+       The most impactful section. Big number. Few words.
+       ═══════════════════════════════════════════ -->
+  <section class="scarcity" id="scarcity">
+    <div class="scarcity-inner reveal">
+      <p class="scarcity-number">30</p>
+      <p class="scarcity-text">
+        Only 30 pieces leave our atelier each month.
+      </p>
+      <p class="scarcity-sub">
+        Each piece is handcrafted by a single artisan. There is no factory. There is no rush.<br>
+        If you'd like to be considered for the next production cycle, please inquire below.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S8: THE ATELIER LIST — Waiting list
+       ═══════════════════════════════════════════ -->
+  <section class="atelier-list" id="atelier-list">
+    <div class="atelier-list-inner reveal">
+      <span class="section-label">Priority Access</span>
+      <h2 class="atelier-list-title">The Atelier List</h2>
+      <p class="atelier-list-desc">
+        Join our list to receive early access to new collections, limited editions, and atelier updates.
+      </p>
+      <form class="atelier-form" action="https://formspree.io/f/xwpkjpqr" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       S9: INQUIRE — Contact form
+       Name, email, country, interest, message.
+       ═══════════════════════════════════════════ -->
+  <section class="inquire" id="inquire">
+    <div class="inquire-inner">
+      <div class="inquire-header reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="inquire-title">Inquire</h2>
+        <p class="inquire-desc">
+          For purchases, bespoke requests, and gifting consultations.
+        </p>
+      </div>
+
+      <form class="inquire-form reveal" action="https://formspree.io/f/xwpkjpqr" method="POST">
+        <div class="inquire-row">
+          <div class="inquire-field">
+            <label for="inq-name">Name</label>
+            <input type="text" id="inq-name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="inquire-field">
+            <label for="inq-email">Email</label>
+            <input type="email" id="inq-email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+
+        <div class="inquire-row">
+          <div class="inquire-field">
+            <label for="inq-country">Country</label>
+            <select id="inq-country" name="country" required>
+              <option value="" disabled selected>Select your country</option>
+              <option value="US">United States</option>
+              <option value="GB">United Kingdom</option>
+              <option value="FR">France</option>
+              <option value="DE">Germany</option>
+              <option value="AU">Australia</option>
+              <option value="CA">Canada</option>
+              <option value="DK">Denmark</option>
+              <option value="SE">Sweden</option>
+              <option value="NO">Norway</option>
+              <option value="SG">Singapore</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="JP">Japan</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+          <div class="inquire-field">
+            <label for="inq-interest">Interested In</label>
+            <select id="inq-interest" name="interest" required>
+              <option value="" disabled selected>Select a category</option>
+              <option value="necklace">Necklace</option>
+              <option value="earrings">Earrings</option>
+              <option value="kanzashi">Kanzashi (Hair Pin)</option>
+              <option value="display">Display Masu Case</option>
+              <option value="bespoke">Bespoke / Custom</option>
+              <option value="gift">Gifting</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="inquire-field">
+          <label for="inq-message">Message</label>
+          <textarea id="inq-message" name="message" placeholder="Tell us about your interest, occasion, or any special requests..."></textarea>
+        </div>
+
+        <div class="inquire-submit">
+          <button type="submit" class="cta-btn">Send Inquiry</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <p class="footer-brand">KUMIKI</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/kumiki" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @kumiki
+      </a>
+    </div>
+    <p class="footer-location">Kyoto, Japan</p>
+    <p class="footer-contact"><a href="mailto:contact@fomusglobal.com">contact@fomusglobal.com</a></p>
+    <p class="footer-copy">&copy; 2026 KUMIKI. All rights reserved.</p>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS
+       ═══════════════════════════════════════════ -->
+  <script>
+    // Navigation scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 80);
+    });
+
+    // Mobile menu
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Scroll reveal with stagger
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('active');
+          }, index * 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  </script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "KUMIKI",
+    "url": "https://kumiki.fomusglobal.com",
+    "logo": "https://kumiki.fomusglobal.com/IMG_6538.JPG",
+    "description": "The world's smallest masu jewelry — wearable art born from 1,300 years of Japanese tradition.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kyoto",
+      "addressCountry": "JP"
+    },
+    "sameAs": [
+      "https://www.instagram.com/kumiki"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "contact@fomusglobal.com",
+      "contactType": "customer service"
+    }
+  }
+  </script>
+
+</body>
+</html>

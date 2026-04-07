@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kumiki.fomusglobal.com/sitemap.xml
