@@ -38,7 +38,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kumiki.fomusglobal.com/index_ja.html" },
+      { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://kumiki.fomusglobal.com/index.html" },
       { "@type": "ListItem", "position": 2, "name": "枡バッジ", "item": "https://kumiki.fomusglobal.com/badge.html" }
     ]
   }
@@ -460,6 +460,29 @@
     .breadcrumb a { color: #999; text-decoration: none; }
     .breadcrumb a:hover { color: var(--gold); }
     .breadcrumb span { margin: 0 4px; }
+
+    /* Language Switcher */
+    .nav-lang {
+      display: none; gap: 12px; align-items: center;
+    }
+    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4); transition: color 0.3s;
+    }
+    .nav.scrolled .nav-lang a { color: #999; }
+    .nav-lang a:hover { color: var(--gold); }
+    .nav-lang a.active { color: var(--gold); }
+    .nav-lang-divider { color: rgba(255,255,255,0.2); font-size: 10px; }
+    .nav.scrolled .nav-lang-divider { color: #ddd; }
+    .mobile-lang { display: flex; gap: 16px; }
+    .mobile-lang a {
+      font-family: 'Cormorant Garamond', serif; font-size: 12px;
+      letter-spacing: 0.1em; color: var(--text-muted); transition: color 0.3s;
+    }
+    .mobile-lang a:hover { color: var(--gold); }
+    .mobile-lang a.active { color: var(--gold); font-weight: 500; }
   </style>
 </head>
 <body>
@@ -469,14 +492,19 @@
   <!-- NAVIGATION -->
   <nav class="nav" id="nav" role="navigation" aria-label="メインナビゲーション">
     <div class="nav-inner">
-      <a href="index_ja.html" class="nav-logo font-en">KUMIKI</a>
+      <a href="index.html" class="nav-logo font-en">KUMIKI</a>
       <ul class="nav-links">
-        <li><a href="index_ja.html">トップ</a></li>
-        <li><a href="index_ja.html#collection">コレクション</a></li>
-        <li><a href="index_ja.html#contact">お問い合わせ</a></li>
-        <li><a href="en/badge.html" class="nav-lang font-en">EN</a></li>
-        <li><a href="fr/badge.html" class="nav-lang font-en">FR</a></li>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="index.html#collection">コレクション</a></li>
+        <li><a href="index.html#contact">お問い合わせ</a></li>
       </ul>
+      <div class="nav-lang">
+        <a href="badge.html" class="active font-en">JA</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="en/badge.html" class="font-en">EN</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="fr/badge.html" class="font-en">FR</a>
+      </div>
       <button class="nav-menu-btn" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="メニューを開く">
         <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -485,7 +513,7 @@
 
   <!-- Breadcrumb -->
   <div class="breadcrumb" aria-label="パンくずリスト">
-    <a href="index_ja.html">トップ</a><span>&gt;</span>枡バッジ
+    <a href="index.html">トップ</a><span>&gt;</span>枡バッジ
   </div>
 
   <!-- Mobile Menu -->
@@ -497,13 +525,16 @@
       </button>
     </div>
     <div class="mobile-menu-body">
-      <a href="index_ja.html" onclick="closeMobile()">トップ</a>
-      <a href="index_ja.html#collection" onclick="closeMobile()">コレクション</a>
-      <a href="index_ja.html#contact" onclick="closeMobile()">お問い合わせ</a>
+      <a href="index.html" onclick="closeMobile()">トップ</a>
+      <a href="index.html#collection" onclick="closeMobile()">コレクション</a>
+      <a href="index.html#contact" onclick="closeMobile()">お問い合わせ</a>
     </div>
     <div class="mobile-menu-footer">
-      <a href="en/badge.html" class="font-en">English</a>
-      <a href="fr/badge.html" class="font-en">Français</a>
+      <div class="mobile-lang">
+        <a href="badge.html" class="active">日本語</a>
+        <a href="en/badge.html">English</a>
+        <a href="fr/badge.html">Français</a>
+      </div>
     </div>
   </div>
 
@@ -616,7 +647,7 @@
     <div class="container">
       <div class="footer-brand font-en">KUMIKI</div>
       <div class="footer-links">
-        <a href="index_ja.html">トップ</a>
+        <a href="index.html">トップ</a>
         <a href="https://instagram.com/kumiki" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:contact@fomusglobal.com">contact@fomusglobal.com</a>
       </div>

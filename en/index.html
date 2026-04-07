@@ -9,7 +9,7 @@
 
   <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/index.html" />
-  <link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index_ja.html" />
+  <link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index.html" />
   <link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/index.html" />
 
   <!-- OGP -->
@@ -214,7 +214,7 @@
     .heading-lg {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.3rem, 3vw, 2.2rem);
-      font-weight: 400; line-height: 1.6; letter-spacing: 0.08em;
+      font-weight: 400; line-height: 1.6; letter-spacing: 0.12em;
       color: var(--text-primary);
     }
 
@@ -327,12 +327,26 @@
     .nav-links a:hover::after { width: 100%; }
 
     .nav-lang {
-      font-family: 'Cormorant Garamond', serif; font-size: 10px;
-      letter-spacing: 0.15em; color: rgba(255, 255, 255, 0.5);
-      transition: color 0.3s; margin-left: 48px;
+      display: none; gap: 12px; align-items: center;
     }
-    .nav.scrolled .nav-lang { color: var(--text-faint); }
-    .nav-lang:hover { color: var(--gold); }
+    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4); transition: color 0.3s;
+    }
+    .nav.scrolled .nav-lang a { color: #999; }
+    .nav-lang a:hover { color: var(--gold); }
+    .nav-lang a.active { color: var(--gold); }
+    .nav-lang-divider { color: rgba(255,255,255,0.2); font-size: 10px; }
+    .nav.scrolled .nav-lang-divider { color: #ddd; }
+    .mobile-lang { display: flex; gap: 16px; }
+    .mobile-lang a {
+      font-family: 'Cormorant Garamond', serif; font-size: 12px;
+      letter-spacing: 0.1em; color: var(--text-muted); transition: color 0.3s;
+    }
+    .mobile-lang a:hover { color: var(--gold); }
+    .mobile-lang a.active { color: var(--gold); font-weight: 500; }
 
     .nav-menu-btn { display: block; color: rgba(255, 255, 255, 0.8); transition: color 0.5s; }
     .nav.scrolled .nav-menu-btn { color: var(--text-primary); }
@@ -658,9 +672,14 @@
         <li><a href="#masu">The Masu</a></li>
         <li><a href="#collection">Collection</a></li>
         <li><a href="#contact">Inquire</a></li>
-        <li><a href="../index_ja.html" class="nav-lang font-en">JA</a></li>
-        <li><a href="../fr/index.html" class="nav-lang font-en">FR</a></li>
       </ul>
+      <div class="nav-lang">
+        <a href="../index.html" class="font-en">JA</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="index.html" class="active font-en">EN</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="../fr/index.html" class="font-en">FR</a>
+      </div>
       <button class="nav-menu-btn" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
         <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -683,8 +702,11 @@
       <a href="#contact" onclick="closeMobile()">Inquire</a>
     </div>
     <div class="mobile-menu-footer">
-      <a href="../index_ja.html" class="font-en">日本語</a>
-      <a href="../fr/index.html" class="font-en">Français</a>
+      <div class="mobile-lang">
+        <a href="../index.html">日本語</a>
+        <a href="index.html" class="active">English</a>
+        <a href="../fr/index.html">Français</a>
+      </div>
     </div>
   </div>
 
@@ -1041,7 +1063,7 @@
       <div class="footer-links">
         <a href="https://instagram.com/kumiki" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:contact@fomusglobal.com">contact@fomusglobal.com</a>
-        <a href="../index_ja.html" class="font-en">日本語</a>
+        <a href="../index.html" class="font-en">日本語</a>
         <a href="../fr/index.html" class="font-en">Français</a>
       </div>
       <p class="footer-copy">&copy; 2026 FOMUS LLC. All rights reserved.</p>

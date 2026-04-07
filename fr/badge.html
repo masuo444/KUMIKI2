@@ -163,6 +163,29 @@
     @media (max-width: 767px) { .dual-photo-grid { padding: 0 16px; } .cta-buttons .cta-btn { width: 100%; justify-content: center; } }
     .breadcrumb { padding: 8px 24px; font-size: 11px; color: #999; font-family: 'Cormorant Garamond', serif; }
     .breadcrumb a { color: #999; text-decoration: none; } .breadcrumb a:hover { color: var(--gold); } .breadcrumb span { margin: 0 4px; }
+
+    /* Language Switcher */
+    .nav-lang {
+      display: none; gap: 12px; align-items: center;
+    }
+    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4); transition: color 0.3s;
+    }
+    .nav.scrolled .nav-lang a { color: #999; }
+    .nav-lang a:hover { color: var(--gold); }
+    .nav-lang a.active { color: var(--gold); }
+    .nav-lang-divider { color: rgba(255,255,255,0.2); font-size: 10px; }
+    .nav.scrolled .nav-lang-divider { color: #ddd; }
+    .mobile-lang { display: flex; gap: 16px; }
+    .mobile-lang a {
+      font-family: 'Cormorant Garamond', serif; font-size: 12px;
+      letter-spacing: 0.1em; color: var(--text-muted); transition: color 0.3s;
+    }
+    .mobile-lang a:hover { color: var(--gold); }
+    .mobile-lang a.active { color: var(--gold); font-weight: 500; }
   </style>
 </head>
 <body>
@@ -177,6 +200,13 @@
         <li><a href="index.html#collection">Collection</a></li>
         <li><a href="index.html#contact">Nous contacter</a></li>
       </ul>
+      <div class="nav-lang">
+        <a href="../badge.html" class="font-en">JA</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="../en/badge.html" class="font-en">EN</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="badge.html" class="active font-en">FR</a>
+      </div>
       <button class="nav-menu-btn" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Ouvrir le menu">
         <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -200,8 +230,11 @@
       <a href="index.html#contact" onclick="closeMobile()">Nous contacter</a>
     </div>
     <div class="mobile-menu-footer">
-      <a href="../en/badge.html">English</a>
-      <a href="../badge.html">日本語</a>
+      <div class="mobile-lang">
+        <a href="../badge.html">日本語</a>
+        <a href="../en/badge.html">English</a>
+        <a href="badge.html" class="active">Français</a>
+      </div>
     </div>
   </div>
 

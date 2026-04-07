@@ -54,7 +54,7 @@
     :focus-visible{outline:2px solid var(--gold);outline-offset:4px}:focus:not(:focus-visible){outline:none}
     .skip-link{position:absolute;top:-100%;left:16px;z-index:9999;padding:12px 24px;background:var(--gold);color:white;font-size:13px;letter-spacing:0.06em;transition:top 0.3s}.skip-link:focus{top:16px}
     .font-en{font-family:'Cormorant Garamond',Georgia,serif}
-    .heading-lg{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3vw,2.2rem);font-weight:400;line-height:1.6;letter-spacing:0.08em;color:var(--text-primary)}
+    .heading-lg{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3vw,2.2rem);font-weight:400;line-height:1.6;letter-spacing:0.12em;color:var(--text-primary)}
     .heading-md{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.5rem);font-weight:400;line-height:1.7;letter-spacing:0.04em;color:var(--text-primary)}
     .body-text{font-size:clamp(0.9rem,1.4vw,1.15rem);line-height:2.2;color:var(--text-secondary);letter-spacing:0.02em}
     .reveal{opacity:0;transform:translateY(50px);transition:opacity 1.6s cubic-bezier(0.16,1,0.3,1),transform 1.6s cubic-bezier(0.16,1,0.3,1)}.reveal.active{opacity:1;transform:translateY(0)}.reveal-delay-1{transition-delay:.15s}.reveal-delay-2{transition-delay:.3s}.reveal-delay-3{transition-delay:.45s}
@@ -74,6 +74,7 @@
     .footer{padding:96px 0;border-top:1px solid var(--border-subtle);text-align:center}.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:0.4em;color:var(--text-primary);margin-bottom:32px}.footer-links{display:flex;justify-content:center;gap:32px;margin-bottom:40px;flex-wrap:wrap}.footer-links a{font-size:10px;letter-spacing:0.15em;color:var(--text-muted);transition:color 0.3s}.footer-links a:hover{color:var(--gold)}.footer-copy{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:0.1em;color:var(--text-faint)}
     @media(max-width:767px){.dual-photo-grid{padding:0 16px}.cta-buttons .cta-btn{width:100%;justify-content:center}}
     .breadcrumb{padding:8px 24px;font-size:11px;color:#999;font-family:'Cormorant Garamond',serif}.breadcrumb a{color:#999;text-decoration:none}.breadcrumb a:hover{color:var(--gold)}.breadcrumb span{margin:0 4px}
+    .nav-lang{display:none;gap:12px;align-items:center}@media(min-width:1024px){.nav-lang{display:flex}}.nav-lang a{font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:0.1em;color:rgba(255,255,255,0.4);transition:color 0.3s}.nav.scrolled .nav-lang a{color:#999}.nav-lang a:hover{color:var(--gold)}.nav-lang a.active{color:var(--gold)}.nav-lang-divider{color:rgba(255,255,255,0.2);font-size:10px}.nav.scrolled .nav-lang-divider{color:#ddd}.mobile-lang{display:flex;gap:16px}.mobile-lang a{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:0.1em;color:var(--text-muted);transition:color 0.3s}.mobile-lang a:hover{color:var(--gold)}.mobile-lang a.active{color:var(--gold);font-weight:500}
   </style>
 </head>
 <body>
@@ -87,9 +88,14 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#collection">Collection</a></li>
         <li><a href="index.html#contact">Inquire</a></li>
-        <li><a href="../badge.html" style="font-size:10px;letter-spacing:0.15em;color:var(--text-faint)">JA</a></li>
-        <li><a href="../fr/badge.html" style="font-size:10px;letter-spacing:0.15em;color:var(--text-faint)">FR</a></li>
       </ul>
+      <div class="nav-lang">
+        <a href="../badge.html" class="font-en">JA</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="badge.html" class="active font-en">EN</a>
+        <span class="nav-lang-divider">|</span>
+        <a href="../fr/badge.html" class="font-en">FR</a>
+      </div>
       <button class="nav-menu-btn" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
         <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
       </button>
@@ -113,8 +119,11 @@
       <a href="index.html#contact" onclick="closeMobile()">Inquire</a>
     </div>
     <div class="mobile-menu-footer">
-      <a href="../badge.html">日本語</a>
-      <a href="../fr/badge.html">Français</a>
+      <div class="mobile-lang">
+        <a href="../badge.html">日本語</a>
+        <a href="badge.html" class="active">English</a>
+        <a href="../fr/badge.html">Français</a>
+      </div>
     </div>
   </div>
 
