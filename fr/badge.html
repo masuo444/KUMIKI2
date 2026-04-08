@@ -93,11 +93,11 @@
     .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 28px 32px; transition: all 0.6s ease; }
     .nav.scrolled { background: rgba(250, 249, 247, 0.96); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 18px 32px; box-shadow: 0 1px 0 var(--border-subtle); }
     .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; }
-    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1rem; letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.9); transition: color 0.5s; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.9); transition: color 0.5s; }
     .nav.scrolled .nav-logo { color: var(--text-primary); }
     .nav-links { display: none; list-style: none; gap: 48px; }
     @media (min-width: 1024px) { .nav-links { display: flex; } }
-    .nav-links a { font-family: 'Cormorant Garamond', serif; font-size: 10px; letter-spacing: 0.2em; color: var(--text-muted-inv); transition: color 0.3s; position: relative; }
+    .nav-links a { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.15em; color: var(--text-muted-inv); transition: color 0.3s; position: relative; }
     .nav.scrolled .nav-links a { color: var(--text-muted); } .nav-links a:hover { color: white; } .nav.scrolled .nav-links a:hover { color: var(--text-primary); }
     .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: currentColor; transition: width 0.5s ease; opacity: 0.3; }
     .nav-links a:hover::after { width: 100%; }
@@ -154,7 +154,7 @@
     .cta-buttons .cta-btn { font-size: 10px; padding: 16px 36px; }
 
     .footer { padding: 96px 0; border-top: 1px solid var(--border-subtle); text-align: center; }
-    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1rem; letter-spacing: 0.4em; color: var(--text-primary); margin-bottom: 32px; }
+    .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.4em; color: var(--text-primary); margin-bottom: 32px; }
     .footer-links { display: flex; justify-content: center; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
     .footer-links a { font-size: 10px; letter-spacing: 0.15em; color: var(--text-muted); transition: color 0.3s; }
     .footer-links a:hover { color: var(--gold); }
@@ -171,7 +171,7 @@
     @media (min-width: 1024px) { .nav-lang { display: flex; } }
     .nav-lang a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 11px; letter-spacing: 0.1em;
+      font-size: 13px; letter-spacing: 0.12em;
       color: rgba(255,255,255,0.4); transition: color 0.3s;
     }
     .nav.scrolled .nav-lang a { color: #999; }
