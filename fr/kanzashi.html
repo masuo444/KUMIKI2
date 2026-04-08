@@ -168,6 +168,13 @@
     .price-row:last-child { border-bottom: none; }
     .price-material { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.1em; color: var(--text-secondary); }
     .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.05em; color: var(--text-primary); }
+    .price-from {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary, #555);
+      margin: 16px 0;
+    }
 
     .bespoke { padding: var(--section-gap) 0; background: var(--charcoal); color: white; }
     .bespoke-inner { max-width: 680px; margin: 0 auto; text-align: center; }
@@ -317,12 +324,7 @@
             Pour les jours de fete. Pour tous les jours.<br>
             Mille ans de savoir-faire, glisses dans la chevelure.
           </p>
-          <div class="price-table reveal reveal-delay-3">
-            <div class="price-row"><span class="price-material">Argent 925</span><span class="price-amount">&#165;66,000 / &euro;400</span></div>
-            <div class="price-row"><span class="price-material">Or</span><span class="price-amount">&#165;88,000 / &euro;530</span></div>
-            <div class="price-row"><span class="price-material">Or 18 carats</span><span class="price-amount">&#165;132,000 / &euro;800</span></div>
-            <div class="price-row"><span class="price-material">Platine</span><span class="price-amount">&#165;198,000 / &euro;1,200</span></div>
-          </div>
+          <p class="price-from">À partir de 400€</p>
           <div class="reveal reveal-delay-3" style="margin-top: 40px;">
             <a href="#contact" class="cta-btn">Nous contacter<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg></a>
           </div>
@@ -331,6 +333,21 @@
     </div>
   </section>
 
+
+  <!-- PRICING GUIDE -->
+  <section class="pricing-guide" style="padding: 80px 0; text-align: center;">
+    <div class="container" style="max-width: 480px;">
+      <span class="section-label font-en">Prix</span>
+      <h2 class="heading-lg" style="margin-bottom: 40px;">Prix par matériau</h2>
+      <div class="price-table">
+        <div class="price-row"><span class="price-material">Argent 925</span><span class="price-amount">400€</span></div>
+        <div class="price-row"><span class="price-material">Or</span><span class="price-amount">530€</span></div>
+        <div class="price-row"><span class="price-material">Or 18 carats</span><span class="price-amount">800€</span></div>
+        <div class="price-row"><span class="price-material">Platine</span><span class="price-amount">1 200€</span></div>
+      </div>
+      <p class="body-text" style="margin-top: 32px;">Collier, boucles d’oreilles, kanzashi — même prix.<br>Seul le matériau détermine le tarif.</p>
+    </div>
+  </section>
   <section class="bespoke">
     <div class="container">
       <div class="bespoke-inner">

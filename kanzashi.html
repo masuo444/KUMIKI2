@@ -380,6 +380,13 @@
       letter-spacing: 0.05em;
       color: var(--text-primary, #1A1A1A);
     }
+    .price-from {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary, #555);
+      margin: 16px 0;
+    }
 
     /* CONTACT */
     .contact { padding: var(--section-gap) 0; }
@@ -552,12 +559,7 @@
             ハレの日に。日常に。<br>
             千年、髪に挿されてきた祈りのかたち。
           </p>
-          <div class="price-table reveal reveal-delay-3">
-            <div class="price-row"><span class="price-material">Silver 925</span><span class="price-amount">&yen;66,000</span></div>
-            <div class="price-row"><span class="price-material">Gold</span><span class="price-amount">&yen;88,000</span></div>
-            <div class="price-row"><span class="price-material">K18 Gold</span><span class="price-amount">&yen;132,000</span></div>
-            <div class="price-row"><span class="price-material">Platinum</span><span class="price-amount">&yen;198,000</span></div>
-          </div>
+          <p class="price-from">From &yen;66,000</p>
           <div class="reveal reveal-delay-3" style="margin-top: 40px;">
             <a href="#contact" class="cta-btn">
               お問い合わせ
@@ -569,6 +571,21 @@
     </div>
   </section>
 
+
+  <!-- PRICING GUIDE -->
+  <section class="pricing-guide" style="padding: 80px 0; text-align: center;">
+    <div class="container" style="max-width: 480px;">
+      <span class="section-label font-en">Price</span>
+      <h2 class="heading-lg" style="margin-bottom: 40px;">素材別価格</h2>
+      <div class="price-table">
+        <div class="price-row"><span class="price-material">Silver 925</span><span class="price-amount">&yen;66,000</span></div>
+        <div class="price-row"><span class="price-material">Gold</span><span class="price-amount">&yen;88,000</span></div>
+        <div class="price-row"><span class="price-material">K18 Gold</span><span class="price-amount">&yen;132,000</span></div>
+        <div class="price-row"><span class="price-material">Platinum</span><span class="price-amount">&yen;198,000</span></div>
+      </div>
+      <p class="body-text" style="margin-top: 32px;">ネックレス、ピアス、かんざし — すべて同一価格です。<br>素材のみで価格が変わります。</p>
+    </div>
+  </section>
   <!-- BESPOKE — かんざし特化 -->
   <section class="bespoke">
     <div class="container">
