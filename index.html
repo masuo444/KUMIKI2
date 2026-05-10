@@ -503,19 +503,6 @@
     @media (min-width: 768px) { .bespoke-content { padding: var(--section-gap) 48px; } }
     .bespoke-inner { max-width: 1200px; margin: 0 auto; }
 
-    /* BADGE SECTION */
-    .badge-section { padding: clamp(60px, 8vw, 100px) 0; background: var(--charcoal); }
-    .badge-grid { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
-    @media (min-width: 768px) { .badge-grid { grid-template-columns: 1fr 1fr; gap: 80px; } }
-    .badge-images { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .badge-images { grid-template-columns: 1fr 1fr; gap: 24px; } }
-    .badge-image { aspect-ratio: 4/5; overflow: hidden; }
-    .badge-image img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .badge-image:hover img { transform: scale(1.04); }
-
     /* PARALLAX */
     .parallax-break { position: relative; height: 50vh; min-height: 300px; overflow: hidden; background: #000; }
     .parallax-break img {
@@ -876,34 +863,6 @@
       <div class="reveal reveal-delay-3">
         <a href="gift.html" class="cta-btn">
           ギフトを探す
-          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MASU BADGE -->
-  <section class="badge-section" id="badge">
-    <div class="container">
-      <div class="badge-header reveal" style="text-align: center; margin-bottom: 40px;">
-        <span class="section-label font-en">Masu Badge</span>
-        <h2 class="heading-lg" style="color: rgba(255,255,255,0.95); margin-bottom: 24px;">枡バッジ</h2>
-        <p class="body-text" style="color: rgba(255,255,255,0.55); max-width: 560px; margin: 0 auto;">
-          KUMIKIのジュエリーをお選びいただいた方に、<br>
-          オーナーの証として枡バッジをお付けしています。
-        </p>
-      </div>
-      <div class="badge-images reveal">
-        <div class="badge-image img-reveal" data-img-reveal>
-          <img src="/images/products/masu-badge-women.jpg" alt="KUMIKI 枡バッジ 女性" loading="lazy">
-        </div>
-        <div class="badge-image img-reveal" data-img-reveal>
-          <img src="/images/products/masu-badge-men.jpg" alt="KUMIKI 枡バッジ 男性" loading="lazy">
-        </div>
-      </div>
-      <div class="badge-footer reveal" style="text-align: center; margin-top: 40px;">
-        <a href="badge.html" class="cta-btn cta-btn--light">
-          詳しく見る
           <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
         </a>
       </div>
