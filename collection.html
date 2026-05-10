@@ -67,13 +67,11 @@
     .nav-actions { justify-self: end; }
     .nav a:hover, .nav .active { color: var(--gold); }
     .hero {
-      min-height: 100vh;
       background: #050505;
       color: white;
       padding-top: 74px;
     }
-    .hero-inner { padding: clamp(48px, 7vw, 84px) 0 clamp(56px, 7vw, 90px); }
-    .hero-copy { max-width: 780px; margin-bottom: 42px; }
+    .hero-inner { padding: clamp(54px, 8vw, 96px) 0 clamp(56px, 7vw, 90px); }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -291,7 +289,7 @@
     }
     @media (max-width: 620px) {
       .container { padding: 0 24px; }
-      .hero-inner { padding-top: 98px; }
+      .hero-inner { padding-top: 88px; }
       .genre-grid { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; }
       .logo { font-size: 1.18rem; }
@@ -318,11 +316,6 @@
   <main>
     <header class="hero">
       <div class="container hero-inner">
-        <div class="hero-copy">
-          <div class="eyebrow font-en">Collection</div>
-          <h1>作品を、<br>ジャンルで選ぶ。</h1>
-          <p>身につけるもの。髪に挿すもの。装いに印を残すもの。KUMIKIのすべてを、ジャンルから。</p>
-        </div>
         <div class="genre-grid" aria-label="ジャンルで絞り込む">
           <button class="genre-card" type="button" data-filter="earrings" aria-pressed="false">
             <span class="genre-card-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe98060588191b02f35faa3e0517d.png" alt=""></span>
