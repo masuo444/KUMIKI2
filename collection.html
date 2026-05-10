@@ -226,13 +226,30 @@
       object-fit: cover;
       transition: opacity .8s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1);
     }
-    .product-photo .wear-photo { opacity: 0; }
+    .product-photo .wear-photo,
+    .product-photo .wear-photo-alt { opacity: 0; }
     .product-photo:hover .work-photo,
     .product-photo:focus .work-photo,
     .product-photo.show-worn .work-photo { opacity: 0; }
     .product-photo:hover .wear-photo,
     .product-photo:focus .wear-photo,
     .product-photo.show-worn .wear-photo { opacity: 1; }
+    .product-photo.has-alt:hover .wear-photo-alt,
+    .product-photo.has-alt:focus .wear-photo-alt,
+    .product-photo.has-alt.show-worn .wear-photo-alt { animation: badgeWearSwap 4s infinite; }
+    .product-photo.has-alt:hover .wear-photo,
+    .product-photo.has-alt:focus .wear-photo,
+    .product-photo.has-alt.show-worn .wear-photo { animation: badgeWearPrimary 4s infinite; }
+    @keyframes badgeWearSwap {
+      0%, 44% { opacity: 0; }
+      50%, 94% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    @keyframes badgeWearPrimary {
+      0%, 44% { opacity: 1; }
+      50%, 94% { opacity: 0; }
+      100% { opacity: 1; }
+    }
     .product:hover .product-photo img { transform: scale(1.035); }
     .product h3 {
       font-size: 1rem;
@@ -441,21 +458,9 @@
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Display%20Kanzashi">相談する</a>
           </article>
           <article class="product" data-category="badge">
-            <div class="product-photo" tabindex="0" aria-label="Masu Badge 着用写真を見る"><img class="work-photo" src="images/products/masu-badge.jpg" alt="Masu Badge"><img class="wear-photo" src="images/products/masu-badge-men.jpg" alt="Masu Badge 着用写真" loading="lazy"></div>
+            <div class="product-photo has-alt" tabindex="0" aria-label="Masu Badge 着用写真を見る"><img class="work-photo" src="images/products/masu-badge.jpg" alt="Masu Badge"><img class="wear-photo" src="images/products/masu-badge-men.jpg" alt="Masu Badge 男性着用写真" loading="lazy"><img class="wear-photo-alt" src="images/products/masu-badge-women.jpg" alt="Masu Badge 女性着用写真" loading="lazy"></div>
             <h3>Masu Badge</h3>
-            <p>KUMIKIの印を、身につける形に。</p>
-            <a href="badge-luxury-ja.html">詳しく見る</a>
-          </article>
-          <article class="product" data-category="badge">
-            <div class="product-photo" tabindex="0" aria-label="Badge for Jacket 着用写真を見る"><img class="work-photo" src="images/products/masu-badge.jpg" alt="Badge for Jacket"><img class="wear-photo" src="images/products/masu-badge-men.jpg" alt="Badge for Jacket 着用写真" loading="lazy"></div>
-            <h3>Badge for Jacket</h3>
-            <p>ジャケットやコートに、静かな余白を。</p>
-            <a href="badge-luxury-ja.html">詳しく見る</a>
-          </article>
-          <article class="product" data-category="badge">
-            <div class="product-photo" tabindex="0" aria-label="Badge for Bag 着用写真を見る"><img class="work-photo" src="images/products/masu-badge.jpg" alt="Badge for Bag"><img class="wear-photo" src="images/products/masu-badge-women.jpg" alt="Badge for Bag 着用写真" loading="lazy"></div>
-            <h3>Badge for Bag</h3>
-            <p>バッグに、小さな日本を。</p>
+            <p>ジャケットにも、バッグにも。KUMIKIの印を、日々の装いに。</p>
             <a href="badge-luxury-ja.html">詳しく見る</a>
           </article>
         </div>
