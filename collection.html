@@ -150,7 +150,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 34px;
     }
     .filter-button {
       appearance: none;
@@ -180,7 +179,7 @@
       display: grid;
       grid-template-columns: .85fr 1.15fr;
       gap: 72px;
-      align-items: end;
+      align-items: start;
       margin-bottom: 60px;
     }
     .section-label {
@@ -348,16 +347,13 @@
             <span class="section-label font-en">All Works</span>
             <h2>すべての作品</h2>
           </div>
-          <div>
-            <p>カードを選ぶと、そのジャンルだけを表示します。もう一度「すべて」を選べば、全作品に戻ります。</p>
-            <div class="filter-row" aria-label="商品フィルター">
-              <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
-              <button class="filter-button" type="button" data-filter="earrings" aria-pressed="false">イヤリング</button>
-              <button class="filter-button" type="button" data-filter="pierce" aria-pressed="false">ピアス</button>
-              <button class="filter-button" type="button" data-filter="necklace" aria-pressed="false">ネックレス</button>
-              <button class="filter-button" type="button" data-filter="kanzashi" aria-pressed="false">かんざし</button>
-              <button class="filter-button" type="button" data-filter="badge" aria-pressed="false">バッジ</button>
-            </div>
+          <div class="filter-row" aria-label="商品フィルター">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
+            <button class="filter-button" type="button" data-filter="earrings" aria-pressed="false">イヤリング</button>
+            <button class="filter-button" type="button" data-filter="pierce" aria-pressed="false">ピアス</button>
+            <button class="filter-button" type="button" data-filter="necklace" aria-pressed="false">ネックレス</button>
+            <button class="filter-button" type="button" data-filter="kanzashi" aria-pressed="false">かんざし</button>
+            <button class="filter-button" type="button" data-filter="badge" aria-pressed="false">バッジ</button>
           </div>
         </div>
         <div class="product-grid">
