@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUMIKI | Wa Modern Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbf6ee;
+      --cream: #f6ead8;
+      --ivory: #fffaf2;
+      --ink: #15110d;
+      --muted: rgba(21, 17, 13, .58);
+      --soft: rgba(21, 17, 13, .1);
+      --orange: #d86422;
+      --orange-dark: #a94a18;
+      --gold: #c8a66a;
+      --black: #0b0907;
+      --line: rgba(21, 17, 13, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+
+    .serif {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 300;
+      letter-spacing: 0;
+    }
+
+    .micro {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .top-note {
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: var(--ivory);
+    }
+
+    .nav {
+      height: 82px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 46px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: rgba(21,17,13,.72);
+    }
+
+    .logo {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 36px;
+      letter-spacing: .24em;
+      color: var(--ink);
+    }
+
+    .nav-actions {
+      justify-self: end;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(21,17,13,.48);
+    }
+
+    .lang-switch a {
+      padding-bottom: 7px;
+    }
+
+    .lang-switch .active {
+      color: var(--ink);
+      border-bottom: 1px solid var(--orange);
+    }
+
+    .nav-inquire {
+      color: var(--orange-dark);
+      border-bottom: 1px solid var(--orange);
+      padding-bottom: 7px;
+    }
+
+    .hero {
+      min-height: calc(100vh - 120px);
+      display: grid;
+      grid-template-columns: 41% 59%;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-copy {
+      padding: 76px 48px 54px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 760px;
+    }
+
+    .eyebrow {
+      color: var(--orange-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 46px;
+      height: 1px;
+      background: var(--orange);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(64px, 7.3vw, 112px);
+      line-height: .9;
+      max-width: 620px;
+    }
+
+    .hero-copy p {
+      margin: 30px 0 0;
+      max-width: 455px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.76;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      margin-top: 42px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      height: 50px;
+      padding: 0 26px;
+      border: 1px solid var(--orange);
+      background: var(--orange);
+      color: var(--ivory);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--orange-dark);
+    }
+
+    .hero-media {
+      padding: 34px 44px 44px 0;
+      min-height: 760px;
+    }
+
+    .hero-photo {
+      height: 100%;
+      min-height: 690px;
+      overflow: hidden;
+      background: #d8c9b4;
+      position: relative;
+    }
+
+    .hero-photo img {
+      filter: saturate(.96) contrast(1.03);
+      object-position: center;
+    }
+
+    .hero-stamp {
+      position: absolute;
+      right: 26px;
+      bottom: 26px;
+      width: 118px;
+      height: 118px;
+      border: 1px solid rgba(251,246,238,.74);
+      color: var(--ivory);
+      display: grid;
+      place-items: center;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      background: rgba(8,7,5,.28);
+      backdrop-filter: blur(4px);
+    }
+
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--ivory);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .quick {
+      min-height: 142px;
+      border-right: 1px solid var(--line);
+      padding: 28px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background .2s ease;
+    }
+
+    .quick:hover { background: #fff2e3; }
+    .quick:last-child { border-right: 0; }
+    .quick span { color: rgba(21,17,13,.45); }
+    .quick strong {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 96px 64px;
+    }
+
+    .inner {
+      width: min(100%, 1312px);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 430px;
+      gap: 70px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(48px, 5.4vw, 82px);
+      line-height: .96;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.78;
+      font-weight: 300;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+    }
+
+    .feature-card {
+      min-height: 720px;
+      position: relative;
+      overflow: hidden;
+      background: #ddd0be;
+      display: flex;
+      align-items: flex-end;
+      padding: 36px;
+    }
+
+    .feature-card img {
+      position: absolute;
+      inset: 0;
+      filter: saturate(.94) contrast(1.04);
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(8,7,5,.56));
+    }
+
+    .feature-card .caption {
+      position: relative;
+      z-index: 2;
+      color: var(--ivory);
+    }
+
+    .feature-card h3 {
+      margin: 0;
+      font-size: 56px;
+      line-height: .95;
+    }
+
+    .feature-card p {
+      margin: 14px 0 0;
+      max-width: 390px;
+      color: rgba(251,246,238,.78);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .mini-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .mini-card {
+      min-height: 349px;
+      background: var(--ivory);
+      display: grid;
+      grid-template-columns: 42% 58%;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .mini-card .text {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .mini-card h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 34px;
+      font-weight: 300;
+    }
+
+    .mini-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .collection {
+      background: var(--ivory);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .product {
+      background: var(--ivory);
+      padding: 20px;
+    }
+
+    .product-photo {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #eadfce;
+    }
+
+    .product-photo img {
+      transition: transform .35s ease;
+    }
+
+    .product:hover .product-photo img {
+      transform: scale(1.035);
+    }
+
+    .product h3 {
+      margin: 18px 0 0;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .product p {
+      margin: 8px 0 0;
+      font-size: 12px;
+      color: rgba(21,17,13,.48);
+      line-height: 1.55;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--orange-dark);
+      border-bottom: 1px solid rgba(216,100,34,.34);
+      padding-bottom: 6px;
+    }
+
+    .story-band {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 52% 48%;
+      min-height: 840px;
+      background: var(--cream);
+    }
+
+    .story-image {
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .story-copy {
+      padding: 96px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .story-copy h2 {
+      margin: 0;
+      font-size: clamp(52px, 5.8vw, 88px);
+      line-height: .96;
+    }
+
+    .story-copy p {
+      margin: 28px 0 0;
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.82;
+      font-weight: 300;
+    }
+
+    .service-list {
+      margin-top: 48px;
+      max-width: 600px;
+      border-top: 1px solid rgba(21,17,13,.14);
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      align-items: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(21,17,13,.14);
+    }
+
+    .service strong {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 30px;
+      font-weight: 300;
+      color: var(--orange-dark);
+    }
+
+    .service span {
+      color: rgba(21,17,13,.62);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .inquiry {
+      background: var(--black);
+      color: var(--ivory);
+      padding: 104px 64px;
+    }
+
+    .inquiry-panel {
+      width: min(100%, 1312px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 500px;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .inquiry h2 {
+      margin: 0;
+      font-size: clamp(54px, 6.5vw, 98px);
+      line-height: .92;
+      max-width: 760px;
+    }
+
+    .inquiry p {
+      margin: 30px 0 0;
+      color: rgba(251,246,238,.66);
+      max-width: 530px;
+      line-height: 1.82;
+      font-weight: 300;
+    }
+
+    .form {
+      border: 1px solid rgba(251,246,238,.18);
+      padding: 32px;
+      background: rgba(251,246,238,.035);
+    }
+
+    .field {
+      height: 58px;
+      border-bottom: 1px solid rgba(251,246,238,.18);
+      color: rgba(251,246,238,.62);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .submit {
+      margin-top: 32px;
+      height: 58px;
+      background: var(--orange);
+      color: var(--ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer {
+      background: var(--black);
+      color: rgba(251,246,238,.42);
+      padding: 32px 64px;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(251,246,238,.1);
+    }
+
+    @media (max-width: 980px) {
+      .nav { padding: 0 20px; grid-template-columns: 1fr auto; }
+      .nav-links { display: none; }
+      .nav-actions { gap: 16px; }
+      .nav-actions > .micro:first-child { display: none; }
+      .logo { justify-self: start; font-size: 28px; }
+      .hero, .category-grid, .story-band, .inquiry-panel, .section-head {
+        grid-template-columns: 1fr;
+      }
+      .hero-copy { min-height: auto; padding: 72px 24px 56px; }
+      .hero-media { min-height: 0; padding: 0 24px 34px; }
+      .hero-photo { min-height: 0; height: 520px; }
+      .hero-photo img { object-position: center top; }
+      .hero-stamp { width: 70px; height: 70px; right: 14px; bottom: 14px; font-size: 28px; }
+      .quick-links, .product-grid { grid-template-columns: 1fr 1fr; }
+      .section, .story-copy, .inquiry { padding-left: 24px; padding-right: 24px; }
+      .mini-card { grid-template-columns: 1fr; }
+      .footer { flex-direction: column; gap: 10px; padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-note micro">Private orders from Japan</div>
+  <nav class="nav">
+    <div class="nav-links micro">
+      <a href="pierce-luxury.html">Pierce</a>
+      <a href="necklace-luxury.html">Necklace</a>
+      <a href="badge-luxury.html">Badge</a>
+    </div>
+    <a class="logo" href="#">KUMIKI</a>
+    <div class="nav-actions">
+      <a class="micro" href="#collection">Explore</a>
+      <div class="lang-switch micro">
+        <a class="active" href="lp-hermes-wa.html">EN</a>
+        <span>/</span>
+        <a href="lp-hermes-wa-ja.html">JP</a>
+      </div>
+      <a class="nav-inquire micro" href="#inquiry">Inquire</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow micro">Jewelry / Object</div>
+      <h1 class="serif">A Piece of Japan You Can Wear.</h1>
+      <p>Hinoki, gold, glass, and silence. A miniature masu to wear, then return to its place.</p>
+      <div class="hero-actions">
+        <a class="button micro" href="#collection">Explore</a>
+        <a class="button secondary micro" href="#inquiry">Inquire</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-photo">
+        <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff8f5ea208191b60eb2fc748596d7.png" alt="">
+        <div class="hero-stamp">〼</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="quick-links">
+    <a class="quick" href="#collection"><span class="micro">01 / Necklace</span><strong>Wear</strong></a>
+    <a class="quick" href="#forms"><span class="micro">02 / Display</span><strong>Collect</strong></a>
+    <a class="quick" href="#gift"><span class="micro">03 / Gift</span><strong>Offer</strong></a>
+    <a class="quick" href="#inquiry"><span class="micro">04 / Private</span><strong>Inquire</strong></a>
+  </section>
+
+  <section class="section" id="forms">
+    <div class="inner">
+      <div class="section-head">
+        <h2 class="serif">Worn for the moment. Kept for the room.</h2>
+        <p>A jewel with a second life. Each piece leaves the body and returns to a small black stage.</p>
+      </div>
+      <div class="category-grid">
+        <article class="feature-card">
+          <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff26242b4819190b13174c75f4650.png" alt="">
+          <div class="caption">
+            <h3 class="serif">Wear it</h3>
+            <p>A small architecture of hinoki at the ear, neck, or hair.</p>
+          </div>
+        </article>
+        <div class="mini-grid">
+          <article class="mini-card">
+            <div class="text">
+              <div>
+                <h3>Display it</h3>
+                <p>A quiet place for the piece to rest.</p>
+              </div>
+              <span class="micro">Interior object</span>
+            </div>
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff829793c8191b7ad5627b38ee7af.png" alt="">
+          </article>
+          <article class="mini-card">
+            <div class="text">
+              <div>
+                <h3>Gift it</h3>
+                <p>Wood, red cord, and the first trace of hinoki.</p>
+              </div>
+              <span class="micro">From Japan</span>
+            </div>
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff7d499dc8191b26706ca924a5b85.png" alt="">
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="collection">
+    <div class="inner">
+      <div class="section-head">
+        <h2 class="serif">The Collection</h2>
+        <p>Choose by form, material, and mood. Availability is shared by private inquiry.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7460370819193b40e55e6565fb1.png" alt=""></div>
+          <h3>Silver Flower Masu</h3>
+          <p>Earrings with pearl-centered floral fittings.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe78814f88191b31a72c77751f1cb.png" alt=""></div>
+          <h3>White Temari Masu</h3>
+          <p>Gold hooks, pearls, and hinoki cubes.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7c4cae0819192e94f486893c25d.png" alt=""></div>
+          <h3>Red Blossom Masu</h3>
+          <p>Red floral bead with Japanese craft detail.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe80cb8748191b622cc777f56488f.png" alt=""></div>
+          <h3>Black Blossom Masu</h3>
+          <p>Dark bead, gold fitting, hinoki cube.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff04463048191b82f31ed2c105286.png" alt=""></div>
+          <h3>Gold Masu Necklace</h3>
+          <p>Signature necklace with display value.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff08e9e388191b78a1bca717588a2.png" alt=""></div>
+          <h3>Silver Masu Necklace</h3>
+          <p>Cool metal tone and hinoki geometry.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff37044ec8191960cbeea120fd45a.png" alt=""></div>
+          <h3>Blue Tonbodama Masu</h3>
+          <p>Japanese glass, luminous blue detail.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="product">
+          <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff3b4ed6481918b9ebe56385b9d4f.png" alt=""></div>
+          <h3>Red Clip Masu</h3>
+          <p>Clip earrings with a ceremonial red accent.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-band" id="gift">
+    <div class="story-image"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff569675881918480412613357797.png" alt=""></div>
+    <div class="story-copy">
+      <div class="eyebrow micro">Gift experience</div>
+      <h2 class="serif">The box is part of the piece.</h2>
+      <p>Opened with red mizuhiki. Kept with hinoki. Displayed long after the day is over.</p>
+      <div class="service-list">
+        <div class="service"><strong>01</strong><span>Choose the form.</span></div>
+        <div class="service"><strong>02</strong><span>Select the material.</span></div>
+        <div class="service"><strong>03</strong><span>Receive it from Japan.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inquiry" id="inquiry">
+    <div class="inquiry-panel">
+      <div>
+        <div class="eyebrow micro">Private inquiry</div>
+        <h2 class="serif">Begin with the piece that stays.</h2>
+        <p>Tell us the form you are drawn to. We will reply with availability, material options, and next steps.</p>
+      </div>
+      <div class="form">
+        <div class="field micro"><span>Name</span><span>Required</span></div>
+        <div class="field micro"><span>Email</span><span>Required</span></div>
+        <div class="field micro"><span>Desired piece</span><span>Select</span></div>
+        <div class="field micro"><span>Message</span><span>Optional</span></div>
+        <a class="submit micro" href="mailto:contact@kumiki.com">Inquire Privately</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer micro">
+    <span>KUMIKI by FOMUS</span>
+    <span>Made in Japan / Jewelry & Interior Art</span>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUMIKI | Wa-Modern Luxury</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sumi: #080807;
+      --urushi: #15120f;
+      --washi: #f7f1e6;
+      --kinari: #eee2cf;
+      --hinoki: #d8b986;
+      --gold: #c8a66a;
+      --red: #b41618;
+      --ink: rgba(8, 8, 7, .82);
+      --muted: rgba(8, 8, 7, .56);
+      --mist: rgba(247, 241, 230, .68);
+      --line: rgba(8, 8, 7, .12);
+      --line-inv: rgba(247, 241, 230, .16);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--sumi);
+    }
+
+    body {
+      margin: 0;
+      background: var(--washi);
+      color: var(--sumi);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .serif {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 300;
+      letter-spacing: 0;
+    }
+
+    .jp {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 300;
+      letter-spacing: .08em;
+    }
+
+    .micro {
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 76px;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0 44px;
+      color: var(--washi);
+      background: linear-gradient(180deg, rgba(8,8,7,.78), rgba(8,8,7,.2), transparent);
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 28px;
+      color: rgba(247,241,230,.72);
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      letter-spacing: .24em;
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      justify-self: end;
+      color: var(--gold);
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, var(--sumi) 0 51%, transparent 51%),
+        var(--washi);
+      color: var(--washi);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 48% 52%;
+    }
+
+    .hero-left {
+      position: relative;
+      padding: 124px 70px 74px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .hero-left::before {
+      content: "〼";
+      position: absolute;
+      left: 48px;
+      top: 104px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 300px;
+      color: rgba(200,166,106,.075);
+      line-height: 1;
+    }
+
+    .hero-left::after {
+      content: "";
+      position: absolute;
+      left: 70px;
+      top: 140px;
+      bottom: 170px;
+      width: 1px;
+      background: linear-gradient(var(--gold), transparent);
+      opacity: .42;
+    }
+
+    .vertical-note {
+      position: absolute;
+      left: 102px;
+      top: 158px;
+      writing-mode: vertical-rl;
+      color: rgba(247,241,230,.46);
+      font-size: 13px;
+      line-height: 2.4;
+    }
+
+    .hero-title {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      margin-left: 58px;
+      margin-top: 240px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 54px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(60px, 7vw, 104px);
+      line-height: .92;
+      color: var(--washi);
+    }
+
+    .hero-title p {
+      margin: 28px 0 0;
+      max-width: 490px;
+      color: rgba(247,241,230,.67);
+      font-size: 15px;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .actions {
+      margin-top: 38px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .button {
+      min-width: 194px;
+      height: 52px;
+      border: 1px solid var(--gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(200,166,106,.08);
+      color: var(--washi);
+    }
+
+    .text-link {
+      color: rgba(247,241,230,.66);
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(247,241,230,.28);
+    }
+
+    .hero-right {
+      position: relative;
+      background: var(--washi);
+      color: var(--sumi);
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr 230px;
+      padding-top: 76px;
+    }
+
+    .hero-photo {
+      margin: 86px 56px 0 0;
+      position: relative;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .hero-photo img {
+      filter: saturate(.88) contrast(1.08) brightness(.96);
+      object-position: center;
+    }
+
+    .hero-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(247,241,230,.04), rgba(8,8,7,.1));
+    }
+
+    .hero-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid var(--line);
+      margin-right: 58px;
+    }
+
+    .info-cell {
+      padding: 32px 36px;
+      border-right: 1px solid var(--line);
+    }
+
+    .info-cell:last-child { border-right: 0; }
+
+    .info-cell strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .info-cell span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .red-seal {
+      position: absolute;
+      right: 32px;
+      bottom: 260px;
+      width: 42px;
+      height: 124px;
+      background: var(--red);
+      color: var(--washi);
+      display: grid;
+      place-items: center;
+      writing-mode: vertical-rl;
+      font-size: 12px;
+      letter-spacing: .22em;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .rail {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--washi);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .rail a {
+      min-height: 134px;
+      padding: 28px 34px;
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .rail a:last-child { border-right: 0; }
+
+    .rail span { color: rgba(8,8,7,.42); }
+
+    .rail strong {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 118px 64px;
+      background: var(--washi);
+    }
+
+    .inner {
+      width: min(100%, 1312px);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .92fr .68fr;
+      gap: 110px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(54px, 6.4vw, 92px);
+      line-height: .94;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .wa-grid {
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      min-height: 830px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wa-image {
+      position: relative;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    .wa-image img {
+      filter: contrast(1.08) saturate(.9);
+    }
+
+    .wa-copy {
+      padding: 64px 0 64px 62px;
+      border-left: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .wa-copy h3 {
+      margin: 0;
+      font-size: 62px;
+      line-height: .98;
+    }
+
+    .wa-copy p {
+      margin: 26px 0 0;
+      max-width: 430px;
+      color: var(--muted);
+      line-height: 1.88;
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .stat {
+      padding-top: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .stat:last-child { border-right: 0; }
+
+    .stat strong {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 46px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 10px;
+      color: rgba(8,8,7,.44);
+    }
+
+    .collection {
+      background: var(--kinari);
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1.03fr .94fr 1.03fr;
+      gap: 26px;
+      align-items: end;
+    }
+
+    .work {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .work figure {
+      margin: 0;
+      background: #e9dfcf;
+      overflow: hidden;
+      aspect-ratio: 4 / 5.35;
+    }
+
+    .work:nth-child(2) figure { aspect-ratio: 4 / 4.62; }
+    .work:nth-child(3) figure { aspect-ratio: 4 / 5.78; }
+
+    .work img {
+      filter: saturate(.92) contrast(1.03);
+    }
+
+    .work-meta {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .work h3 {
+      margin: 0;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 36px;
+      font-weight: 300;
+    }
+
+    .work span { color: rgba(8,8,7,.42); }
+
+    .gift {
+      background: var(--sumi);
+      color: var(--washi);
+      display: grid;
+      grid-template-columns: 50% 50%;
+      min-height: 920px;
+    }
+
+    .gift-photo {
+      overflow: hidden;
+      background: #111;
+    }
+
+    .gift-photo img {
+      filter: saturate(.9) contrast(1.05) brightness(.92);
+    }
+
+    .gift-copy {
+      padding: 108px 74px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .gift-copy::before {
+      content: "贈";
+      position: absolute;
+      right: 78px;
+      top: 92px;
+      font-family: "Noto Serif JP", serif;
+      font-size: 190px;
+      color: rgba(200,166,106,.08);
+    }
+
+    .gift-copy h2 {
+      margin: 0;
+      font-size: clamp(58px, 6vw, 88px);
+      line-height: .94;
+      position: relative;
+    }
+
+    .gift-copy p {
+      margin: 34px 0 0;
+      max-width: 540px;
+      color: rgba(247,241,230,.66);
+      font-size: 15px;
+      line-height: 1.9;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .gift-list {
+      margin-top: 56px;
+      max-width: 610px;
+      border-top: 1px solid var(--line-inv);
+      position: relative;
+    }
+
+    .gift-row {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      align-items: center;
+      padding: 21px 0;
+      border-bottom: 1px solid var(--line-inv);
+    }
+
+    .gift-row strong {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: var(--gold);
+    }
+
+    .gift-row span {
+      color: rgba(247,241,230,.66);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .works-feed {
+      background: var(--washi);
+    }
+
+    .feed {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .feed-card {
+      background: var(--washi);
+      padding: 20px;
+    }
+
+    .feed-img {
+      aspect-ratio: 1;
+      background: #e7dccb;
+      overflow: hidden;
+    }
+
+    .feed-card h3 {
+      margin: 18px 0 0;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .feed-card p {
+      margin: 8px 0 0;
+      color: rgba(8,8,7,.5);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .feed-card a {
+      display: inline-block;
+      margin-top: 18px;
+      color: #7a6239;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(122,98,57,.32);
+    }
+
+    .inquiry {
+      min-height: 780px;
+      background:
+        linear-gradient(90deg, rgba(8,8,7,.93), rgba(8,8,7,.82)),
+        url("images/products/craft-2.jpg") center / cover;
+      color: var(--washi);
+      padding: 120px 64px;
+      display: grid;
+      align-items: center;
+    }
+
+    .inquiry-panel {
+      width: min(100%, 1312px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 510px;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .inquiry h2 {
+      margin: 0;
+      font-size: clamp(60px, 7vw, 104px);
+      line-height: .9;
+      max-width: 760px;
+    }
+
+    .inquiry p {
+      margin: 34px 0 0;
+      max-width: 540px;
+      color: rgba(247,241,230,.66);
+      font-size: 15px;
+      line-height: 1.9;
+      font-weight: 300;
+    }
+
+    .form {
+      border: 1px solid var(--line-inv);
+      background: rgba(8,8,7,.44);
+      padding: 34px;
+    }
+
+    .field {
+      height: 58px;
+      border-bottom: 1px solid var(--line-inv);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: rgba(247,241,230,.62);
+    }
+
+    .submit {
+      margin-top: 34px;
+      height: 58px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(200,166,106,.08);
+    }
+
+    .footer {
+      padding: 34px 64px;
+      background: var(--sumi);
+      color: rgba(247,241,230,.42);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 920px) {
+      .nav { grid-template-columns: 1fr auto; padding: 0 22px; }
+      .nav-left { display: none; }
+      .brand { font-size: 26px; }
+      .hero, .hero-right, .section-head, .wa-grid, .gift, .inquiry-panel {
+        grid-template-columns: 1fr;
+      }
+      .hero { background: var(--sumi); }
+      .hero-left { min-height: 72vh; padding: 124px 24px 56px; }
+      .hero-title { margin-left: 0; }
+      .vertical-note, .hero-left::after { display: none; }
+      .hero-photo { margin: 0; min-height: 560px; }
+      .hero-info, .rail, .collection-grid, .feed {
+        grid-template-columns: 1fr;
+      }
+      .section, .gift-copy, .inquiry { padding-left: 24px; padding-right: 24px; }
+      .wa-copy { padding: 42px 0; border-left: 0; }
+      .footer { padding: 28px 24px; flex-direction: column; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-left micro">
+      <a href="#collection">Collection</a>
+      <a href="#story">Story</a>
+      <a href="#gift">Gift</a>
+    </div>
+    <a class="brand" href="#">KUMIKI</a>
+    <a class="nav-cta micro" href="#inquiry">Private Inquiry</a>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-left">
+      <div class="vertical-note jp">身につける日本。<br>飾れる日本。</div>
+      <div class="hero-title">
+        <div class="eyebrow micro">The world's smallest masu</div>
+        <h1 class="serif">A Piece of Japan You Can Wear.</h1>
+        <p>KUMIKI transforms the hinoki masu into jewelry and displayable art. A sacred Japanese form, held in two centimeters.</p>
+        <div class="actions">
+          <a class="button micro" href="#collection">View Collection</a>
+          <a class="text-link micro" href="#inquiry">Request Availability</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-photo">
+        <img src="images/products/hero-collection.jpg" alt="">
+      </div>
+      <div class="hero-info">
+        <div class="info-cell"><strong>Wear it.</strong><span>Jewelry made from hinoki cypress, precious fittings, and Japanese craft detail.</span></div>
+        <div class="info-cell"><strong>Display it.</strong><span>Every work rests in a masu display case, becoming an interior object.</span></div>
+      </div>
+      <div class="red-seal">くみき</div>
+    </div>
+  </header>
+
+  <section class="rail">
+    <a href="#collection"><span class="micro">01 / Signature</span><strong>Necklace</strong></a>
+    <a href="#collection"><span class="micro">02 / Movement</span><strong>Earrings</strong></a>
+    <a href="#collection"><span class="micro">03 / Ritual</span><strong>Kanzashi</strong></a>
+    <a href="#gift"><span class="micro">04 / Ceremony</span><strong>Gift</strong></a>
+  </section>
+
+  <section class="section" id="story">
+    <div class="inner">
+      <div class="section-head">
+        <h2 class="serif">A quiet architecture of hinoki.</h2>
+        <p>Luxury here is not loud. It is the grain of wood, the black interior of the display case, the red mizuhiki, and the pause before touch.</p>
+      </div>
+      <div class="wa-grid">
+        <div class="wa-image"><img src="images/products/display-dark.jpg" alt=""></div>
+        <div class="wa-copy">
+          <div>
+            <div class="eyebrow micro">Wear / Display</div>
+            <h3 class="serif">The piece remains present when it is not worn.</h3>
+            <p>KUMIKI is designed with two lives: on the body, and in the room. The display case is not packaging; it is part of the work.</p>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>1300</strong><span class="micro">Years of form</span></div>
+            <div class="stat"><strong>2cm</strong><span class="micro">Miniature scale</span></div>
+            <div class="stat"><strong>30</strong><span class="micro">Monthly capacity</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section collection" id="collection">
+    <div class="inner">
+      <div class="section-head">
+        <h2 class="serif">The Collection</h2>
+        <p>Three simple forms create the collection: necklace, earrings, and kanzashi. Each piece is made for private inquiry rather than open cart purchase.</p>
+      </div>
+      <div class="collection-grid">
+        <article class="work">
+          <figure><img src="images/products/necklace-yellow.jpg" alt=""></figure>
+          <div class="work-meta"><h3>Necklace</h3><span class="micro">Signature</span></div>
+        </article>
+        <article class="work">
+          <figure><img src="images/products/pierce-white-flower.jpg" alt=""></figure>
+          <div class="work-meta"><h3>Earrings</h3><span class="micro">Movement</span></div>
+        </article>
+        <article class="work">
+          <figure><img src="images/products/kanzashi.jpg" alt=""></figure>
+          <div class="work-meta"><h3>Kanzashi</h3><span class="micro">Ritual</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gift" id="gift">
+    <div class="gift-photo"><img src="images/products/gift-box.jpg" alt=""></div>
+    <div class="gift-copy">
+      <div class="eyebrow micro">Gift Experience</div>
+      <h2 class="serif">The opening is part of the work.</h2>
+      <p>A branded masu box, red mizuhiki, display case, and the first scent of hinoki. The ritual of receiving KUMIKI should feel complete before the jewelry is worn.</p>
+      <div class="gift-list">
+        <div class="gift-row"><strong>01</strong><span>Masu box with branded wood surface</span></div>
+        <div class="gift-row"><strong>02</strong><span>Red mizuhiki knot for a Japanese gift ritual</span></div>
+        <div class="gift-row"><strong>03</strong><span>Display case for daily interior presentation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section works-feed">
+    <div class="inner">
+      <div class="section-head">
+        <h2 class="serif">Selected Works</h2>
+        <p>A compact product view gives confidence while preserving the quiet, private nature of the purchase journey.</p>
+      </div>
+      <div class="feed">
+        <article class="feed-card">
+          <div class="feed-img"><img src="images/products/earring-red-blossom.jpg" alt=""></div>
+          <h3>Red Blossom Earrings</h3>
+          <p>Hinoki masu with red floral bead.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="feed-card">
+          <div class="feed-img"><img src="images/products/earring-tonbodama-blue.jpg" alt=""></div>
+          <h3>Blue Tonbodama Earrings</h3>
+          <p>Japanese glass and gold fittings.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="feed-card">
+          <div class="feed-img"><img src="images/products/necklace-white.jpg" alt=""></div>
+          <h3>Silver Masu Necklace</h3>
+          <p>Minimal form, display case included.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+        <article class="feed-card">
+          <div class="feed-img"><img src="images/products/earring-temari-black.jpg" alt=""></div>
+          <h3>Black Temari Earrings</h3>
+          <p>Dark bead, hinoki cube, gold detail.</p>
+          <a class="micro" href="#inquiry">Inquire</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="inquiry" id="inquiry">
+    <div class="inquiry-panel">
+      <div>
+        <div class="eyebrow micro">Private Inquiry</div>
+        <h2 class="serif">Begin with the piece that stays with you.</h2>
+        <p>KUMIKI is made in limited monthly capacity. Tell us the form, material, and intention. We reply within 24 hours with availability and next steps.</p>
+      </div>
+      <div class="form">
+        <div class="field micro"><span>Name</span><span>Required</span></div>
+        <div class="field micro"><span>Email</span><span>Required</span></div>
+        <div class="field micro"><span>Desired piece</span><span>Select</span></div>
+        <div class="field micro"><span>Message</span><span>Optional</span></div>
+        <a class="submit micro" href="mailto:contact@kumiki.com">Request Availability</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer micro">
+    <span>KUMIKI by FOMUS</span>
+    <span>Made in Japan / Jewelry & Interior Art</span>
+  </footer>
+</body>
+</html>

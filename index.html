@@ -450,23 +450,23 @@
     .duality-header { text-align: center; margin-bottom: 80px; }
     .duality-header .heading-lg { margin-bottom: 16px; }
     .duality-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 768px) { .duality-grid { grid-template-columns: 1fr 1fr; gap: 24px; } }
-    .duality-card { position: relative; aspect-ratio: 3/4; overflow: hidden; background: #000; }
+    @media (min-width: 768px) { .duality-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+    .duality-card { position: relative; overflow: hidden; background: transparent; }
+    .duality-card figure { aspect-ratio: 3/4; overflow: hidden; background: #000; }
     .duality-card img {
       width: 100%; height: 100%; object-fit: cover; opacity: 0.75;
       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .duality-card:hover img { opacity: 0.6; transform: scale(1.03); }
     .duality-card-label {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 48px 32px; background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+      padding: 28px 4px 0; background: transparent; text-align: left;
     }
     .duality-card-label h3 {
       font-family: 'Shippori Mincho', serif;
       font-size: clamp(1rem, 2vw, 1.3rem); font-weight: 500;
-      color: white; letter-spacing: 0.15em; margin-bottom: 8px;
+      color: var(--text-primary); letter-spacing: 0.15em; margin-bottom: 8px;
     }
-    .duality-card-label p { font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); letter-spacing: 0.06em; }
+    .duality-card-label p { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.06em; }
 
     /* COLLECTION */
     .collection { padding: var(--section-gap) 0; }
@@ -771,27 +771,40 @@
     <img src="/images/products/masu-top.jpg" alt="枡の美" data-parallax-img loading="lazy">
   </div>
 
-  <!-- 身につける × 飾る -->
+  <!-- 身につける × 飾る × 贈る -->
   <section class="duality" id="duality">
     <div class="container">
       <div class="duality-header">
-        <span class="section-label font-en reveal">Wear it. Display it.</span>
-        <h2 class="heading-lg reveal reveal-delay-1">身につける × 飾る</h2>
+        <span class="section-label font-en reveal">Wear it. Display it. Gift it.</span>
+        <h2 class="heading-lg reveal reveal-delay-1">身につける × 飾る × 贈る</h2>
         <p class="body-text reveal reveal-delay-2" style="margin-top: 16px;">365日、あなたのそばに。</p>
       </div>
       <div class="duality-grid">
         <div class="duality-card reveal img-reveal" data-img-reveal>
-          <img src="/images/products/model-necklace.jpg" alt="枡ネックレスを身につけた女性" loading="lazy">
+          <figure>
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff26242b4819190b13174c75f4650.png" alt="KUMIKIを身につけたモデル" loading="lazy">
+          </figure>
           <div class="duality-card-label">
             <h3>身につける</h3>
-            <p>外出する日は、あなたと一緒に。</p>
+            <p>耳元、首元、髪に。</p>
           </div>
         </div>
         <div class="duality-card reveal reveal-delay-1 img-reveal" data-img-reveal>
-          <img src="/images/products/display-dark.jpg" alt="ディスプレイケースに飾られたピアス" loading="lazy">
+          <figure>
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff829793c8191b7ad5627b38ee7af.png" alt="黒いディスプレイケースに飾られたKUMIKI" loading="lazy">
+          </figure>
           <div class="duality-card-label">
             <h3>飾る</h3>
-            <p>帰宅したら、部屋のアートに。</p>
+            <p>身につけない時間にも、余韻を。</p>
+          </div>
+        </div>
+        <div class="duality-card reveal reveal-delay-2 img-reveal" data-img-reveal>
+          <figure>
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff7d499dc8191b26706ca924a5b85.png" alt="KUMIKIのギフトパッケージ" loading="lazy">
+          </figure>
+          <div class="duality-card-label">
+            <h3>贈る</h3>
+            <p>木箱。水引。ひのきの気配。</p>
           </div>
         </div>
       </div>
@@ -808,33 +821,33 @@
       <div class="collection-grid">
         <div class="collection-item reveal">
           <div class="collection-img-wrap img-reveal" data-img-reveal>
-            <img src="/images/products/necklace-white.jpg" alt="KUMIKI 枡ネックレス" loading="lazy">
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7460370819193b40e55e6565fb1.png" alt="KUMIKI 枡ピアス" loading="lazy">
           </div>
-          <h3>ネックレス</h3>
-          <span class="collection-en font-en">Necklace</span>
-          <a href="necklace.html" class="cta-btn">
+          <h3>ピアス・イヤリング</h3>
+          <span class="collection-en font-en">Pierce / Earrings</span>
+          <a href="pierce-luxury-ja.html" class="cta-btn">
             コレクションを見る
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
           </a>
         </div>
         <div class="collection-item reveal reveal-delay-1">
           <div class="collection-img-wrap img-reveal" data-img-reveal>
-            <img src="/images/products/earring-white-blossom.jpg" alt="KUMIKI 枡ピアス" loading="lazy">
+            <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff04463048191b82f31ed2c105286.png" alt="KUMIKI 枡ネックレス" loading="lazy">
           </div>
-          <h3>ピアス・イヤリング</h3>
-          <span class="collection-en font-en">Earrings</span>
-          <a href="earrings.html" class="cta-btn">
+          <h3>ネックレス</h3>
+          <span class="collection-en font-en">Necklace</span>
+          <a href="necklace-luxury-ja.html" class="cta-btn">
             コレクションを見る
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
           </a>
         </div>
         <div class="collection-item reveal reveal-delay-2">
           <div class="collection-img-wrap img-reveal" data-img-reveal>
-            <img src="/images/products/kanzashi.jpg" alt="KUMIKI 枡かんざし" loading="lazy">
+            <img src="images/products/masu-badge.jpg" alt="KUMIKI 枡バッジ" loading="lazy">
           </div>
-          <h3>かんざし</h3>
-          <span class="collection-en font-en">Kanzashi</span>
-          <a href="kanzashi.html" class="cta-btn">
+          <h3>バッジ</h3>
+          <span class="collection-en font-en">Badge</span>
+          <a href="badge-luxury-ja.html" class="cta-btn">
             コレクションを見る
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
           </a>
@@ -842,7 +855,7 @@
       </div>
       <div style="text-align: center; padding: 40px 0 0;">
         <p class="body-text" style="color: var(--text-muted);">
-          すべての商品に、枡ディスプレイケース・水引パッケージ・枡バッジが付属します。
+          纏う、置く、贈る。KUMIKIの作品は、身につけない時間まで美しく。
         </p>
       </div>
     </div>
@@ -974,7 +987,7 @@
       <div class="footer-brand font-en">KUMIKI</div>
       <div class="footer-links">
         <a href="https://instagram.com/kumiki" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:contact@fomusglobal.com">contact@fomusglobal.com</a>
+        <a href="mailto:contact@fomus.jp">contact@fomus.jp</a>
         <a href="en/index.html" class="font-en">English</a>
         <a href="fr/index.html" class="font-en">Français</a>
       </div>
