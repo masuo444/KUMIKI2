@@ -67,19 +67,13 @@
     .nav-actions { justify-self: end; }
     .nav a:hover, .nav .active { color: var(--gold); }
     .hero {
-      min-height: 88vh;
-      display: grid;
-      grid-template-columns: 44% 56%;
+      min-height: 100vh;
       background: #050505;
       color: white;
       padding-top: 74px;
     }
-    .hero-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 8vw;
-    }
+    .hero-inner { padding: clamp(48px, 7vw, 84px) 0 clamp(56px, 7vw, 90px); }
+    .hero-copy { max-width: 780px; margin-bottom: 42px; }
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -102,28 +96,79 @@
       margin-top: 34px;
       color: rgba(255,255,255,.62);
     }
-    .hero-photo { min-height: 88vh; overflow: hidden; }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; opacity: .82; }
-    .genre-nav {
-      position: sticky;
-      top: 73px;
-      z-index: 10;
-      background: rgba(250,249,247,.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(16px);
+    .genre-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
     }
-    .genre-nav .container {
+    .genre-card {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      display: block;
+      font: inherit;
+      position: relative;
+      text-align: left;
+      overflow: hidden;
+    }
+    .genre-card[aria-pressed="true"] { border-color: var(--gold); }
+    .genre-card-photo {
+      display: block;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #111;
+    }
+    .genre-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .86;
+      transition: transform 1.2s cubic-bezier(.16,1,.3,1), opacity .8s;
+    }
+    .genre-card:hover img { transform: scale(1.035); opacity: 1; }
+    .genre-card-body {
+      display: block;
+      position: absolute;
+      inset: auto 0 0;
+      padding: 54px 18px 18px;
+      background: linear-gradient(to top, rgba(0,0,0,.78), rgba(0,0,0,0));
+    }
+    .genre-card-body strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+      font-weight: 500;
+      letter-spacing: .12em;
+    }
+    .genre-card-body span {
+      color: rgba(255,255,255,.5);
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    .filter-row {
       display: flex;
-      gap: 28px;
-      overflow-x: auto;
-      padding-top: 18px;
-      padding-bottom: 18px;
-      font-size: 12px;
-      letter-spacing: .2em;
-      white-space: nowrap;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
     }
-    .genre-nav a { color: var(--muted); }
-    .genre-nav a:hover { color: var(--text); }
+    .filter-button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 12px 18px;
+      font: inherit;
+      font-size: 11px;
+      letter-spacing: .18em;
+    }
+    .filter-button[aria-pressed="true"] {
+      border-color: var(--gold);
+      color: var(--text);
+    }
     .section {
       padding: clamp(92px, 12vw, 160px) 0;
       border-bottom: 1px solid var(--line);
@@ -166,6 +211,7 @@
       border-top: 1px solid var(--line);
       padding-top: 24px;
     }
+    .product.is-hidden { display: none; }
     .dark .product { border-top-color: rgba(255,255,255,.16); }
     .product-photo {
       aspect-ratio: 4 / 5;
@@ -238,15 +284,15 @@
       .nav-links { display: none; }
       .nav-actions { gap: 18px; }
       .nav-actions a:first-child { display: none; }
-      .hero, .section-head, .inquiry-grid { grid-template-columns: 1fr; }
-      .hero-copy { padding: 78px 24px 58px; }
+      .section-head, .inquiry-grid { grid-template-columns: 1fr; }
       h1 { font-size: clamp(2.45rem, 12vw, 3.7rem); line-height: 1.42; }
-      .hero-photo { min-height: 0; height: 520px; }
+      .genre-grid { grid-template-columns: repeat(2, 1fr); }
       .product-grid { grid-template-columns: 1fr 1fr; gap: 32px 18px; }
-      .genre-nav { top: 70px; }
     }
     @media (max-width: 620px) {
       .container { padding: 0 24px; }
+      .hero-inner { padding-top: 98px; }
+      .genre-grid { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; }
       .logo { font-size: 1.18rem; }
       .footer { flex-direction: column; padding: 34px 24px; }
@@ -271,177 +317,142 @@
 
   <main>
     <header class="hero">
-      <div class="hero-copy">
-        <div class="eyebrow font-en">Collection</div>
-        <h1>作品を、<br>ジャンルで選ぶ。</h1>
-        <p>イヤリング、ピアス、ネックレス、かんざし、バッジ。すべての作品を、身につける時間と飾る時間のために。</p>
-      </div>
-      <div class="hero-photo">
-        <img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff569675881918480412613357797.png" alt="KUMIKIコレクション">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow font-en">Collection</div>
+          <h1>作品を、<br>ジャンルで選ぶ。</h1>
+          <p>身につけるもの。髪に挿すもの。装いに印を残すもの。KUMIKIのすべてを、ジャンルから。</p>
+        </div>
+        <div class="genre-grid" aria-label="ジャンルで絞り込む">
+          <button class="genre-card" type="button" data-filter="earrings" aria-pressed="false">
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe98060588191b02f35faa3e0517d.png" alt=""></span>
+            <span class="genre-card-body"><strong>イヤリング</strong><span class="font-en">Earrings</span></span>
+          </button>
+          <button class="genre-card" type="button" data-filter="pierce" aria-pressed="false">
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7460370819193b40e55e6565fb1.png" alt=""></span>
+            <span class="genre-card-body"><strong>ピアス</strong><span class="font-en">Pierce</span></span>
+          </button>
+          <button class="genre-card" type="button" data-filter="necklace" aria-pressed="false">
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff04463048191b82f31ed2c105286.png" alt=""></span>
+            <span class="genre-card-body"><strong>ネックレス</strong><span class="font-en">Necklace</span></span>
+          </button>
+          <button class="genre-card" type="button" data-filter="kanzashi" aria-pressed="false">
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe8c1c5488191a47a114da5eccbc5.png" alt=""></span>
+            <span class="genre-card-body"><strong>かんざし</strong><span class="font-en">Kanzashi</span></span>
+          </button>
+          <button class="genre-card" type="button" data-filter="badge" aria-pressed="false">
+            <span class="genre-card-photo"><img src="images/products/masu-badge.jpg" alt=""></span>
+            <span class="genre-card-body"><strong>バッジ</strong><span class="font-en">Badge</span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <div class="genre-nav">
-      <div class="container">
-        <a href="#earrings">イヤリング</a>
-        <a href="#pierce">ピアス</a>
-        <a href="#necklace">ネックレス</a>
-        <a href="#kanzashi">かんざし</a>
-        <a href="#badge">バッジ</a>
-      </div>
-    </div>
-
-    <section class="section" id="earrings">
+    <section class="section" id="works">
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="section-label font-en">Earrings</span>
-            <h2>イヤリング</h2>
+            <span class="section-label font-en">All Works</span>
+            <h2>すべての作品</h2>
           </div>
-          <p>耳に添える小さな枡。金具の存在まで美しく、黒いディスプレイケースに戻しても作品として残ります。</p>
+          <div>
+            <p>カードを選ぶと、そのジャンルだけを表示します。もう一度「すべて」を選べば、全作品に戻ります。</p>
+            <div class="filter-row" aria-label="商品フィルター">
+              <button class="filter-button" type="button" data-filter="all" aria-pressed="true">すべて</button>
+              <button class="filter-button" type="button" data-filter="earrings" aria-pressed="false">イヤリング</button>
+              <button class="filter-button" type="button" data-filter="pierce" aria-pressed="false">ピアス</button>
+              <button class="filter-button" type="button" data-filter="necklace" aria-pressed="false">ネックレス</button>
+              <button class="filter-button" type="button" data-filter="kanzashi" aria-pressed="false">かんざし</button>
+              <button class="filter-button" type="button" data-filter="badge" aria-pressed="false">バッジ</button>
+            </div>
+          </div>
         </div>
         <div class="product-grid">
-          <article class="product">
+          <article class="product" data-category="earrings">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe98060588191b02f35faa3e0517d.png" alt="White Blossom Earrings"></div>
             <h3>White Blossom Earrings</h3>
             <p>白い玉と金色の金具。やわらかな余白を耳元に。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20White%20Blossom%20Earrings">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="earrings">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffea032d6481919134a9c48e9ef411.png" alt="Black Blossom Earrings"></div>
             <h3>Black Blossom Earrings</h3>
             <p>黒と金の余韻。静かに印象を残す一点。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Black%20Blossom%20Earrings">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="earrings">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffea44ab6c81918300b12e62e12699.png" alt="Red Blossom Earrings"></div>
             <h3>Red Blossom Earrings</h3>
             <p>赤い花玉が、ひのきに小さな熱を灯す。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Red%20Blossom%20Earrings">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="earrings">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe900c6888191806654a38ddaecab.png" alt="Yellow Flower Earrings"></div>
             <h3>Yellow Flower Earrings</h3>
             <p>花の金具とひのき。明るさを抑えた華やぎ。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Yellow%20Flower%20Earrings">相談する</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark" id="pierce">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-label font-en">Pierce</span>
-            <h2>ピアス</h2>
-          </div>
-          <p>揺れるひのき、花、手毬、とんぼ玉。動きの中で、小さな日本のかたちが現れます。</p>
-        </div>
-        <div class="product-grid">
-          <article class="product">
+          <article class="product" data-category="pierce">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7460370819193b40e55e6565fb1.png" alt="Silver Flower Pierce"></div>
             <h3>Silver Flower Pierce</h3>
             <p>真珠を抱いた花。銀色の光とひのきの静けさ。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Silver%20Flower%20Pierce">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="pierce">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe78814f88191b31a72c77751f1cb.png" alt="White Temari Pierce"></div>
             <h3>White Temari Pierce</h3>
             <p>白い手毬と金色の金具。やわらかな余白を耳元に。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20White%20Temari%20Pierce">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="pierce">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe7c4cae0819192e94f486893c25d.png" alt="Red Blossom Pierce"></div>
             <h3>Red Blossom Pierce</h3>
             <p>赤い花玉とひのき。耳元に小さな灯りを。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Red%20Blossom%20Pierce">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="pierce">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff37044ec8191960cbeea120fd45a.png" alt="Blue Tonbodama Pierce"></div>
             <h3>Blue Tonbodama Pierce</h3>
             <p>深い青のとんぼ玉。日本の硝子が静かに揺れる。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Blue%20Tonbodama%20Pierce">相談する</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="necklace">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-label font-en">Necklace</span>
-            <h2>ネックレス</h2>
-          </div>
-          <p>KUMIKIの中心にあるかたち。胸元に、ひのきの輪郭と静かな存在感を残します。</p>
-        </div>
-        <div class="product-grid">
-          <article class="product">
+          <article class="product" data-category="necklace">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff04463048191b82f31ed2c105286.png" alt="Gold Masu Necklace"></div>
             <h3>Gold Masu Necklace</h3>
             <p>金色とひのきの温度。KUMIKIの象徴的な一本。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Gold%20Masu%20Necklace">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="necklace">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff08e9e388191b78a1bca717588a2.png" alt="Silver Masu Necklace"></div>
             <h3>Silver Masu Necklace</h3>
             <p>銀の輪郭、静かな枡。光を抑えた端正な表情。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Silver%20Masu%20Necklace">相談する</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark" id="kanzashi">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-label font-en">Kanzashi</span>
-            <h2>かんざし</h2>
-          </div>
-          <p>髪に挿す、小さな建築。和装だけでなく、現代の装いに静かな儀式性を添えます。</p>
-        </div>
-        <div class="product-grid">
-          <article class="product">
+          <article class="product" data-category="kanzashi">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169ffe8c1c5488191a47a114da5eccbc5.png" alt="Kanzashi with stones"></div>
             <h3>Masu Kanzashi</h3>
             <p>透かし菊と天然石。髪に残る、ひのきの気配。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Masu%20Kanzashi">相談する</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="kanzashi">
             <div class="product-photo"><img src="images/generated-luxury-all/ig_0bdf5a570c91ba120169fff0d691488191bc3bcc2140004df5.png" alt="Kanzashi worn"></div>
             <h3>Display Kanzashi</h3>
             <p>身につけても、飾っても。一本で空気を変える作品。</p>
             <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Display%20Kanzashi">相談する</a>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="badge">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="section-label font-en">Badge</span>
-            <h2>バッジ</h2>
-          </div>
-          <p>ジャケット、バッグ、コートに。KUMIKIの枡記号を、日々の装いに残すための小さな印。</p>
-        </div>
-        <div class="product-grid">
-          <article class="product">
+          <article class="product" data-category="badge">
             <div class="product-photo"><img src="images/products/masu-badge.jpg" alt="Masu Badge"></div>
             <h3>Masu Badge</h3>
             <p>KUMIKIの印を、身につける形に。</p>
             <a href="badge-luxury-ja.html">詳しく見る</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="badge">
             <div class="product-photo"><img src="images/products/masu-badge-men.jpg" alt="Badge for Jacket"></div>
             <h3>Badge for Jacket</h3>
             <p>ジャケットやコートに、静かな余白を。</p>
             <a href="badge-luxury-ja.html">詳しく見る</a>
           </article>
-          <article class="product">
+          <article class="product" data-category="badge">
             <div class="product-photo"><img src="images/products/masu-badge-women.jpg" alt="Badge for Bag"></div>
             <h3>Badge for Bag</h3>
             <p>バッグに、小さな日本を。</p>
@@ -469,5 +480,41 @@
     <span>KUMIKI by FOMUS</span>
     <span>contact@fomus.jp</span>
   </footer>
+  <script>
+    const filterControls = document.querySelectorAll('[data-filter]');
+    const products = document.querySelectorAll('.product[data-category]');
+    const validCategories = ['earrings', 'pierce', 'necklace', 'kanzashi', 'badge'];
+
+    function setFilter(category, shouldScroll = true) {
+      const activeCategory = validCategories.includes(category) ? category : 'all';
+
+      products.forEach((product) => {
+        product.classList.toggle('is-hidden', activeCategory !== 'all' && product.dataset.category !== activeCategory);
+      });
+
+      filterControls.forEach((control) => {
+        control.setAttribute('aria-pressed', String(control.dataset.filter === activeCategory));
+      });
+
+      if (activeCategory === 'all') {
+        history.replaceState(null, '', `${location.pathname}#works`);
+      } else {
+        history.replaceState(null, '', `${location.pathname}#${activeCategory}`);
+      }
+
+      if (shouldScroll) {
+        document.getElementById('works').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    filterControls.forEach((control) => {
+      control.addEventListener('click', () => setFilter(control.dataset.filter));
+    });
+
+    const initialCategory = location.hash.replace('#', '');
+    if (validCategories.includes(initialCategory)) {
+      setFilter(initialCategory, false);
+    }
+  </script>
 </body>
 </html>
