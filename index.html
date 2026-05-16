@@ -454,10 +454,11 @@
     .duality-card { position: relative; overflow: hidden; background: transparent; }
     .duality-card figure { aspect-ratio: 3/4; overflow: hidden; background: #000; }
     .duality-card img {
-      width: 100%; height: 100%; object-fit: cover; opacity: 0.75;
+      width: 100%; height: 100%; object-fit: cover; opacity: 0.92;
+      filter: brightness(1.15);
       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .duality-card:hover img { opacity: 0.6; transform: scale(1.03); }
+    .duality-card:hover img { opacity: 0.75; transform: scale(1.03); }
     .duality-card-label {
       padding: 28px 4px 0; background: transparent; text-align: left;
     }
