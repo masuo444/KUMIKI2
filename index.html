@@ -446,7 +446,7 @@
     }
 
     /* DUALITY */
-    .duality { padding: var(--section-gap) 0; background: var(--ivory); }
+    .duality { padding: var(--section-gap) 0 clamp(60px, 8vw, 100px); background: var(--ivory); }
     .duality-header { text-align: center; margin-bottom: 80px; }
     .duality-header .heading-lg { margin-bottom: 16px; }
     .duality-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
@@ -470,7 +470,7 @@
     .duality-card-label p { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.06em; }
 
     /* COLLECTION */
-    .collection { padding: var(--section-gap) 0; }
+    .collection { padding: clamp(60px, 8vw, 100px) 0 var(--section-gap); }
     .collection-header { text-align: center; margin-bottom: 80px; }
     .collection-grid { display: grid; grid-template-columns: 1fr; gap: 64px; }
     @media (min-width: 768px) { .collection-grid { grid-template-columns: repeat(3, 1fr); gap: 48px; } }
