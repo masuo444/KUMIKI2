@@ -179,24 +179,13 @@
     }
 
     /* UTILITIES */
-    .reveal {
-      opacity: 0; transform: translateY(50px);
-      transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.15s; }
-    .reveal-delay-2 { transition-delay: 0.3s; }
-    .reveal-delay-3 { transition-delay: 0.45s; }
+    .reveal { opacity: 1; transform: none; }
+    .reveal.active { opacity: 1; transform: none; }
+    .reveal-delay-1, .reveal-delay-2, .reveal-delay-3 { transition-delay: 0s; }
 
     .img-reveal { position: relative; overflow: hidden; }
-    .img-reveal::after {
-      content: ''; position: absolute; inset: 0; background: var(--ivory);
-      transform: scaleX(1); transform-origin: right;
-      transition: transform 1.4s cubic-bezier(0.77, 0, 0.175, 1); z-index: 2;
-    }
-    .img-reveal.revealed::after { transform: scaleX(0); }
-    .img-reveal--dark::after { background: var(--charcoal); }
+    .img-reveal::after { display: none; }
+    .img-reveal--dark::after { display: none; }
 
     .section-label {
       display: block; font-family: 'Cormorant Garamond', serif;
