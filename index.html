@@ -30,7 +30,8 @@
   <meta name="twitter:description" content="壁厚1.6mmの世界最小ひのき枡ジュエリー。霰組みの伝統技法、月30点限定の手仕事。ネックレス・耳飾り・かんざし。">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
   <link rel="canonical" href="https://kumiki.fomusglobal.com/">
 
   <!-- Preload hero image -->
@@ -489,11 +490,13 @@
       display: flex; justify-content: space-between; align-items: center;
       max-width: 1400px; margin: 0 auto;
     }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem;
-      letter-spacing: 0.4em; color: white; transition: color 0.5s;
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo-img {
+      height: 36px; width: auto; display: block;
+      filter: brightness(0) invert(1);
+      transition: filter 0.5s;
     }
-    .nav.scrolled .nav-logo { color: var(--text-primary); }
+    .nav.scrolled .nav-logo-img { filter: brightness(0); }
 
     .nav-links { display: none; list-style: none; gap: 48px; }
     @media (min-width: 1024px) { .nav-links { display: flex; } }
@@ -877,7 +880,9 @@
   <!-- NAVIGATION -->
   <nav class="nav" id="nav" role="navigation" aria-label="メインナビゲーション">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo font-en">KUMIKI</a>
+      <a href="index.html" class="nav-logo">
+        <img src="/images/logo.png" alt="KUMIKI MASU JEWELRY" class="nav-logo-img">
+      </a>
       <ul class="nav-links">
         <li><a href="#kumiki">組木とは</a></li>
         <li><a href="#masu">枡の物語</a></li>

@@ -30,7 +30,8 @@
   <meta name="twitter:description" content="Le plus petit masu en hinoki, paroi 1,6 mm. Collier, boucles d'oreilles, kanzashi. Fait main. KUMIKI bijoux japonais.">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="apple-touch-icon" href="/images/logo.png">
   <link rel="canonical" href="https://kumiki.fomusglobal.com/fr/">
 
   <!-- Preload hero image -->
@@ -583,15 +584,13 @@
       margin: 0 auto;
     }
 
-    .nav-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.4em;
-      color: white;
-      transition: color 0.5s;
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo-img {
+      height: 36px; width: auto; display: block;
+      filter: brightness(0) invert(1);
+      transition: filter 0.5s;
     }
-
-    .nav.scrolled .nav-logo { color: var(--text-primary); }
+    .nav.scrolled .nav-logo-img { filter: brightness(0); }
 
     .nav-links {
       display: none;
@@ -1548,7 +1547,9 @@
        ═══════════════════════════════════════════ -->
   <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
     <div class="nav-inner">
-      <a href="#" class="nav-logo font-en">KUMIKI</a>
+      <a href="#" class="nav-logo">
+        <img src="/images/logo.png" alt="KUMIKI MASU JEWELRY" class="nav-logo-img">
+      </a>
       <ul class="nav-links">
         <li><a href="#kumiki">Kumiki</a></li>
         <li><a href="#masu">Le Masu</a></li>
