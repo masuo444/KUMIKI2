@@ -1163,6 +1163,53 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-header">
+          <span class="section-label font-en reveal">Contact</span>
+          <h2 class="heading-lg reveal reveal-delay-1">Inquire</h2>
+          <p class="body-text reveal reveal-delay-2" style="margin-top: 16px;">
+            We welcome your questions about our collection.
+          </p>
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/xwpkjpqr" method="POST">
+          <input type="hidden" name="page" value="top">
+          <input type="hidden" name="lang" value="en">
+          <div class="form-group reveal">
+            <label for="field-name">Name</label>
+            <input type="text" id="field-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="field-email">Email</label>
+            <input type="email" id="field-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="field-product">Interest</label>
+            <select id="field-product" name="product" required>
+              <option value="" disabled selected>Please select</option>
+              <option value="necklace">Necklace</option>
+              <option value="earrings">Earrings</option>
+              <option value="kanzashi">Kanzashi</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group reveal reveal-delay-2">
+            <label for="field-message">Message</label>
+            <textarea id="field-message" name="message"></textarea>
+          </div>
+          <div class="form-submit reveal reveal-delay-3">
+            <button type="submit" class="cta-btn">
+              Send
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="faq-section" id="faq" style="padding: var(--section-gap) 0; background: var(--stone);">
     <div class="container" style="max-width: 760px; margin: 0 auto; padding: 0 24px;">
@@ -1207,53 +1254,6 @@
       <div class="faq-item reveal" style="padding: 32px 0;">
         <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Is hinoki wood jewelry durable?</h3>
         <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Each KUMIKI masu receives a specialized protective coating that provides durability for daily wear. We recommend avoiding prolonged submersion in water or exposure to extreme humidity. The natural fragrance of hinoki cypress remains even after coating — a quiet reminder of Japan's ancient forests with every wear.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-header">
-          <span class="section-label font-en reveal">Contact</span>
-          <h2 class="heading-lg reveal reveal-delay-1">Inquire</h2>
-          <p class="body-text reveal reveal-delay-2" style="margin-top: 16px;">
-            We welcome your questions about our collection.
-          </p>
-        </div>
-        <form id="contactForm" action="https://formspree.io/f/xwpkjpqr" method="POST">
-          <input type="hidden" name="page" value="top">
-          <input type="hidden" name="lang" value="en">
-          <div class="form-group reveal">
-            <label for="field-name">Name</label>
-            <input type="text" id="field-name" name="name" required autocomplete="name">
-          </div>
-          <div class="form-group reveal reveal-delay-1">
-            <label for="field-email">Email</label>
-            <input type="email" id="field-email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-group reveal reveal-delay-1">
-            <label for="field-product">Interest</label>
-            <select id="field-product" name="product" required>
-              <option value="" disabled selected>Please select</option>
-              <option value="necklace">Necklace</option>
-              <option value="earrings">Earrings</option>
-              <option value="kanzashi">Kanzashi</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group reveal reveal-delay-2">
-            <label for="field-message">Message</label>
-            <textarea id="field-message" name="message"></textarea>
-          </div>
-          <div class="form-submit reveal reveal-delay-3">
-            <button type="submit" class="cta-btn">
-              Send
-              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </section>

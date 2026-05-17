@@ -1197,6 +1197,53 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-header">
+          <span class="section-label font-en reveal">Contact</span>
+          <h2 class="heading-lg reveal reveal-delay-1">お問い合わせ</h2>
+          <p class="body-text reveal reveal-delay-2" style="margin-top: 16px;">
+            コレクションに関するご相談を承ります。
+          </p>
+        </div>
+        <form id="contactForm" action="https://formspree.io/f/xwpkjpqr" method="POST">
+          <input type="hidden" name="page" value="top">
+          <input type="hidden" name="lang" value="ja">
+          <div class="form-group reveal">
+            <label for="field-name">お名前</label>
+            <input type="text" id="field-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="field-email">メールアドレス</label>
+            <input type="email" id="field-email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="field-product">ご興味のある商品</label>
+            <select id="field-product" name="product" required>
+              <option value="" disabled selected>お選びください</option>
+              <option value="necklace">ネックレス</option>
+              <option value="earrings">耳飾り</option>
+              <option value="kanzashi">かんざし</option>
+              <option value="other">その他</option>
+            </select>
+          </div>
+          <div class="form-group reveal reveal-delay-2">
+            <label for="field-message">メッセージ</label>
+            <textarea id="field-message" name="message"></textarea>
+          </div>
+          <div class="form-submit reveal reveal-delay-3">
+            <button type="submit" class="cta-btn">
+              送信する
+              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="faq-section" id="faq" aria-labelledby="faq-heading" style="padding: var(--section-gap) 0; background: var(--stone);">
     <div class="container">
@@ -1263,53 +1310,6 @@
           </div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-header">
-          <span class="section-label font-en reveal">Contact</span>
-          <h2 class="heading-lg reveal reveal-delay-1">お問い合わせ</h2>
-          <p class="body-text reveal reveal-delay-2" style="margin-top: 16px;">
-            コレクションに関するご相談を承ります。
-          </p>
-        </div>
-        <form id="contactForm" action="https://formspree.io/f/xwpkjpqr" method="POST">
-          <input type="hidden" name="page" value="top">
-          <input type="hidden" name="lang" value="ja">
-          <div class="form-group reveal">
-            <label for="field-name">お名前</label>
-            <input type="text" id="field-name" name="name" required autocomplete="name">
-          </div>
-          <div class="form-group reveal reveal-delay-1">
-            <label for="field-email">メールアドレス</label>
-            <input type="email" id="field-email" name="email" required autocomplete="email">
-          </div>
-          <div class="form-group reveal reveal-delay-1">
-            <label for="field-product">ご興味のある商品</label>
-            <select id="field-product" name="product" required>
-              <option value="" disabled selected>お選びください</option>
-              <option value="necklace">ネックレス</option>
-              <option value="earrings">耳飾り</option>
-              <option value="kanzashi">かんざし</option>
-              <option value="other">その他</option>
-            </select>
-          </div>
-          <div class="form-group reveal reveal-delay-2">
-            <label for="field-message">メッセージ</label>
-            <textarea id="field-message" name="message"></textarea>
-          </div>
-          <div class="form-submit reveal reveal-delay-3">
-            <button type="submit" class="cta-btn">
-              送信する
-              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="14 7 19 12 14 17"/></svg>
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </section>
