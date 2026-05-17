@@ -413,13 +413,14 @@
       display: flex; justify-content: space-between; align-items: center;
       max-width: 1400px; margin: 0 auto;
     }
-    .nav-logo { display: flex; align-items: center; }
-    .nav-logo-img {
-      height: 36px; width: auto; display: block;
-      filter: brightness(0) invert(1);
-      transition: filter 0.5s;
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.4em;
+      color: white;
+      transition: color 0.5s;
     }
-    .nav.scrolled .nav-logo-img { filter: brightness(0); }
+    .nav.scrolled .nav-logo { color: var(--text-primary); }
 
     .nav-links { display: none; list-style: none; gap: 48px; }
     @media (min-width: 1024px) { .nav-links { display: flex; } }
@@ -816,9 +817,7 @@
   <!-- NAVIGATION -->
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        <img src="/images/logo.png" alt="KUMIKI MASU JEWELRY" class="nav-logo-img">
-      </a>
+      <a href="index.html" class="nav-logo font-en">KUMIKI</a>
       <ul class="nav-links">
         <li><a href="#kumiki">Kumiki</a></li>
         <li><a href="#masu">The Masu</a></li>
