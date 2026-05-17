@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
+# Block LP/draft pages from indexing
+Disallow: /lp-design-kumiki.html
+Disallow: /lp-design-kumiki-v2.html
+Disallow: /lp-hermes-wa.html
+Disallow: /lp-hermes-wa-ja.html
+Disallow: /lp-luxury-research.html
+Disallow: /lp-wa-modern.html
+Disallow: /badge-luxury.html
+Disallow: /badge-luxury-ja.html
+Disallow: /necklace-luxury.html
+Disallow: /necklace-luxury-ja.html
+Disallow: /pierce-luxury.html
+Disallow: /pierce-luxury-ja.html
+
 Sitemap: https://kumiki.fomusglobal.com/sitemap.xml

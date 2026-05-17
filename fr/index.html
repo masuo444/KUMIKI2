@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KUMIKI | Bijoux Masu - Le plus petit masu en bois de hinoki au monde</title>
-  <meta name="description" content="KUMIKI sublime le masu, mesure sacree japonaise vieille de 1300 ans, en bijoux d'exception. Colliers, boucles d'oreilles, kanzashi. Decouvrir la collection.">
-  <meta name="keywords" content="bijoux masu,kumiki,bijoux japonais,hinoki,artisanat japonais,kanzashi,joaillerie japonaise,metier d'art">
+  <title>Bijoux Masu KUMIKI — 1 300 ans d'artisanat japonais</title>
+  <meta name="description" content="KUMIKI sublime le masu japonais vieux de 1 300 ans en bijou d'exception. Paroi 1,6 mm, fait main. Collier, boucles d'oreilles, kanzashi en hinoki. Découvrir.">
+  <meta name="keywords" content="bijoux masu,KUMIKI bijoux,bijoux japonais,bijoux hinoki,artisanat japonais bijoux,le plus petit masu,bijoux en bois japonais,kanzashi bijoux,cadeau japonais luxe,bijoux porte-bonheur japonais">
 
   <!-- hreflang -->
-  <link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/index.html" />
-  <link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/" />
+  <link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/" />
+  <link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/" />
   <link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/" />
+  <link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/" />
 
   <!-- OGP -->
-  <meta property="og:title" content="KUMIKI | Bijoux Masu - Le Japon, a porter.">
-  <meta property="og:description" content="1300 ans d'histoire. Paroi de 1,6 mm. Le plus petit masu au monde, devenu bijou d'exception.">
+  <meta property="og:title" content="Bijoux Masu KUMIKI — 1 300 ans d'artisanat japonais">
+  <meta property="og:description" content="Le plus petit masu en hinoki, paroi 1,6 mm. Collier, boucles d'oreilles, kanzashi. Fait main. KUMIKI bijoux japonais.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kumiki.fomusglobal.com/fr/">
   <meta property="og:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="KUMIKI">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KUMIKI | Bijoux Masu - Le Japon, a porter.">
-  <meta name="twitter:description" content="1300 ans d'histoire. Paroi de 1,6 mm. Le plus petit masu au monde, devenu bijou d'exception.">
+  <meta name="twitter:title" content="Bijoux Masu KUMIKI — 1 300 ans d'artisanat japonais">
+  <meta name="twitter:description" content="Le plus petit masu en hinoki, paroi 1,6 mm. Collier, boucles d'oreilles, kanzashi. Fait main. KUMIKI bijoux japonais.">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
@@ -39,14 +42,28 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KUMIKI",
-    "alternateName": "Kumiki",
-    "description": "Le plus petit masu au monde, sublime en bijou et objet d'art. 1300 ans d'histoire japonaise, a porter.",
+    "alternateName": "Kumiki bijoux",
+    "description": "KUMIKI, marque de bijoux masu créée par FOMUS LLC au Japon, sublime le masu — mesure sacrée japonaise vieille de 1 300 ans — en bijoux d'exception en bois de hinoki et métaux précieux. Production artisanale limitée à 30 pièces par mois.",
     "url": "https://kumiki.fomusglobal.com",
-    "logo": "https://kumiki.fomusglobal.com/images/products/necklace-white.jpg",
-    "founder": {
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://kumiki.fomusglobal.com/images/products/necklace-white.jpg"
+    },
+    "sameAs": [
+      "https://instagram.com/kumiki"
+    ],
+    "parentOrganization": {
       "@type": "Organization",
       "name": "FOMUS LLC",
-      "url": "https://fomusglobal.com"
+      "url": "https://fomusglobal.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      }
+    },
+    "foundingLocation": {
+      "@type": "Country",
+      "name": "Japan"
     }
   }
   </script>
@@ -56,9 +73,18 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "KUMIKI",
+    "name": "KUMIKI — Bijoux Masu",
     "url": "https://kumiki.fomusglobal.com",
-    "inLanguage": "fr"
+    "inLanguage": ["fr", "ja", "en"],
+    "description": "Bijoux masu en bois de hinoki par KUMIKI. Le plus petit masu au monde, assemblage arare-gumi sans clou ni colle. Production artisanale japonaise.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://kumiki.fomusglobal.com/fr/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
@@ -71,8 +97,96 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Accueil",
+        "name": "KUMIKI",
+        "item": "https://kumiki.fomusglobal.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Bijoux Masu — Version française",
         "item": "https://kumiki.fomusglobal.com/fr/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList — Catégories de produits -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Collection KUMIKI — Bijoux Masu",
+    "description": "Les trois catégories de bijoux masu en bois de hinoki proposées par KUMIKI : collier, boucles d'oreilles et kanzashi.",
+    "numberOfItems": 3,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Collier Masu KUMIKI",
+        "url": "https://kumiki.fomusglobal.com/fr/necklace.html",
+        "description": "Collier masu en bois de hinoki avec assemblage arare-gumi. Le plus petit masu au monde porté comme pendentif. Paroi de 1,6 mm."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Boucles d'oreilles Masu KUMIKI",
+        "url": "https://kumiki.fomusglobal.com/fr/earrings.html",
+        "description": "Boucles d'oreilles masu en hinoki. Versions tonbodama (perles soufflées), temari ou pierres naturelles. Production artisanale."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Kanzashi Masu KUMIKI",
+        "url": "https://kumiki.fomusglobal.com/fr/kanzashi.html",
+        "description": "Kanzashi — épingle à cheveux japonaise — intégrant un masu miniature en bois de hinoki avec assemblage arare-gumi."
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Product — Collier Masu (produit représentatif) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Collier Masu KUMIKI en bois de hinoki",
+    "description": "Le plus petit masu au monde, taillé dans le bois de hinoki (cyprès japonais) avec l'assemblage arare-gumi transmis depuis 1 300 ans, porté comme pendentif de luxe. Paroi de 1,6 mm. Chaque pièce est unique et fabriquée à la main. Production limitée à 30 pièces par mois.",
+    "brand": {
+      "@type": "Brand",
+      "name": "KUMIKI"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "FOMUS LLC",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      }
+    },
+    "material": ["Bois de hinoki (cyprès japonais)", "Argent 925", "Or 18 carats"],
+    "category": "Bijoux / Colliers",
+    "image": "https://kumiki.fomusglobal.com/images/products/necklace-white.jpg",
+    "url": "https://kumiki.fomusglobal.com/fr/necklace.html",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Épaisseur de paroi",
+        "value": "1,6 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Technique d'assemblage",
+        "value": "Arare-gumi (sans clou ni colle)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Production mensuelle",
+        "value": "30 pièces maximum"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Tradition",
+        "value": "1 300 ans d'artisanat japonais"
       }
     ]
   }
@@ -86,10 +200,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Qu'est-ce qu'un masu ?",
+        "name": "Qu'est-ce qu'un masu japonais ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le masu est une mesure sacree japonaise vieille de 1300 ans, taillee dans le bois de hinoki (cypres japonais). Utilise lors des ceremonies shinto et des celebrations, il symbolise la prosperite et le bonheur. KUMIKI sublime cette tradition en bijoux d'exception."
+          "text": "Le masu est une mesure sacrée japonaise vieille de plus de 1 300 ans, taillée dans le bois de hinoki (cyprès japonais). Utilisé lors des cérémonies shinto et des célébrations, il symbolise la prospérité et le bonheur par homophonie avec le verbe japonais « masu », signifiant « croître ». KUMIKI, marque de la société FOMUS LLC, sublime cette tradition en bijoux d'exception portés comme porte-bonheur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qu'est-ce que KUMIKI ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "KUMIKI est une marque de bijoux japonais créée par FOMUS LLC, spécialisée dans la fabrication des plus petits masu au monde en bois de hinoki. Chaque bijou KUMIKI — collier, boucles d'oreilles ou kanzashi — intègre un masu miniature aux parois de 1,6 mm, assemblé selon la technique arare-gumi transmise depuis 1 300 ans, sans clou ni colle. La production est limitée à 30 pièces par mois, toutes faites à la main."
         }
       },
       {
@@ -97,34 +219,64 @@
         "name": "Qu'est-ce que le kumiki ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Le kumiki est l'art japonais ancestral d'assembler le bois sans clou ni vis. Cette technique, qui a edifie les temples de Nara il y a plus de 1300 ans, se retrouve dans les assemblages 'arare-gumi' qui forment chaque masu KUMIKI."
+          "text": "Le kumiki est l'art japonais ancestral d'assembler le bois sans clou ni vis, né il y a plus de 1 300 ans. Cette technique a permis d'édifier les grands temples japonais tels que le Hōryū-ji. L'assemblage arare-gumi, caractéristique visible aux angles du masu, en est la signature. La marque KUMIKI porte ce nom en hommage à cet héritage artisanal."
         }
       },
       {
         "@type": "Question",
-        "name": "Quels sont les materiaux utilises ?",
+        "name": "Quelle est l'épaisseur de la paroi du masu KUMIKI ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Chaque bijou KUMIKI associe le bois de hinoki (cypres japonais) a des metaux precieux : Argent 925, Or, Or 18 carats ou Platine. Les boucles d'oreilles peuvent integrer des tonbodama (perles de verre soufflees), des temari ou des pierres naturelles."
+          "text": "Le masu KUMIKI présente une paroi de 1,6 mm, ce qui en fait le plus petit masu en bois de hinoki au monde. Malgré cette précision extrême, il conserve l'assemblage arare-gumi — technique transmise depuis plus de 1 300 ans au Japon — sans aucun clou ni colle."
         }
       },
       {
         "@type": "Question",
-        "name": "Comment commander ?",
+        "name": "Quels métaux KUMIKI utilise-t-il dans ses bijoux ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Pour decouvrir nos creations ou passer commande, veuillez nous contacter via le formulaire de notre site. Chaque piece est realisee a la main sur commande. Delai de fabrication : 2 a 4 semaines, plus les frais d'expedition internationale."
+          "text": "Chaque bijou KUMIKI associe le bois de hinoki (cyprès japonais) à des métaux précieux selon la pièce et les options souhaitées : Argent 925, Or, Or 18 carats ou Platine. Les boucles d'oreilles peuvent également intégrer des tonbodama (perles de verre soufflées à la main), des temari ou des pierres naturelles."
         }
       },
       {
         "@type": "Question",
-        "name": "Le badge masu est-il en vente ?",
+        "name": "Quelle est la taille du bijou masu KUMIKI ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Non. Le badge masu est un privilege reserve aux proprietaires d'un bijou KUMIKI. Il vous est offert avec chaque creation. Magnetique, il se porte sans abimer vos vetements."
+          "text": "Le masu KUMIKI est le plus petit masu en hinoki au monde, avec une paroi de seulement 1,6 mm. Conçu pour être porté comme bijou au quotidien — collier, boucles d'oreilles ou kanzashi —, il conserve les proportions et l'assemblage arare-gumi du masu traditionnel, réduit à sa plus petite expression possible."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Le bijou masu KUMIKI convient-il comme cadeau de luxe ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Le bijou masu KUMIKI est conçu comme un cadeau d'exception pour les anniversaires, mariages et occasions importantes. Chaque création est présentée dans un écrin masu en hinoki, ornée d'un emballage mizuhiki traditionnel, et accompagnée d'un badge masu exclusif offert avec chaque bijou. Il s'agit d'un cadeau japonais luxe unique au monde, symbolisant la prospérité."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Combien de pièces KUMIKI sont fabriquées chaque mois ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La production de KUMIKI est volontairement limitée à 30 pièces par mois au maximum. Chaque bijou est intégralement réalisé à la main par des artisans japonais selon les techniques traditionnelles. Cette rareté garantit que chaque pièce est unique au monde. Le délai de fabrication est de 2 à 4 semaines après commande."
         }
       }
     ]
+  }
+  </script>
+
+  <!-- JSON-LD: SpeakableSpecification -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Bijoux Masu KUMIKI — 1 300 ans d'artisanat japonais",
+    "url": "https://kumiki.fomusglobal.com/fr/",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".intro-lead", ".faq-section", ".why-kumiki"]
+    }
   }
   </script>
 
@@ -1448,7 +1600,7 @@
        S1: HERO
        ═══════════════════════════════════════════ -->
   <section class="hero">
-    <img src="/images/products/model-jp.jpg" alt="KUMIKI - Bijou masu en bois de hinoki, collier et boucles d'oreilles" class="hero-img">
+    <img src="/images/products/model-jp.jpg" alt="KUMIKI bijoux masu — femme portant un collier et des boucles d'oreilles en bois de hinoki, artisanat japonais" class="hero-img">
     <div class="hero-content" data-parallax="0.15">
       <h1 class="hero-brand font-en">1 300 ans d'artisanat japonais,<br>a porter.</h1>
       <p class="hero-sub font-en">Le plus petit masu au monde, en bijou.</p>
@@ -1484,7 +1636,7 @@
     <div class="container">
       <div class="kumiki-grid">
         <div class="kumiki-image img-reveal img-reveal--dark reveal" data-img-reveal>
-          <img src="/images/products/craft-1.jpg" alt="Assemblage arare-gumi, metier d'art japonais" data-parallax="0.06" loading="lazy">
+          <img src="/images/products/craft-1.jpg" alt="Assemblage arare-gumi du masu KUMIKI — technique japonaise ancestrale de 1 300 ans, sans clou ni colle, en bois de hinoki" data-parallax="0.06" loading="lazy">
         </div>
         <div class="kumiki-text" data-parallax="0.03">
           <span class="section-label font-en reveal">Kumiki</span>
@@ -1509,13 +1661,13 @@
       <div class="craft-gallery" style="margin-top: 80px;">
         <div class="craft-gallery-grid">
           <div class="craft-item reveal img-reveal img-reveal--dark" data-img-reveal>
-            <img src="/images/products/craft-2.jpg" alt="Le plus petit masu au monde" loading="lazy">
+            <img src="/images/products/craft-2.jpg" alt="Le plus petit masu au monde en bois de hinoki — paroi de 1,6 mm, bijou masu KUMIKI" loading="lazy">
           </div>
           <div class="craft-item reveal reveal-delay-1 img-reveal img-reveal--dark" data-img-reveal>
-            <img src="/images/products/craft-3.jpg" alt="Usinage de precision" loading="lazy">
+            <img src="/images/products/craft-3.jpg" alt="Usinage de précision du masu KUMIKI en hinoki — artisanat japonais, paroi de 1,6 mm" loading="lazy">
           </div>
           <div class="craft-item reveal reveal-delay-2 img-reveal img-reveal--dark" data-img-reveal>
-            <img src="/images/products/craft-4.jpg" alt="Finition a la main" loading="lazy">
+            <img src="/images/products/craft-4.jpg" alt="Finition à la main du bijou masu KUMIKI — chaque pièce unique, production limitée à 30 pièces par mois" loading="lazy">
           </div>
         </div>
       </div>
@@ -1553,7 +1705,7 @@
             </p>
           </div>
           <div class="masu-story-image reveal img-reveal" data-img-reveal>
-            <img src="/images/products/masu-original.jpg" alt="Masu traditionnel en bois de hinoki - assemblage arare-gumi" loading="lazy">
+            <img src="/images/products/masu-original.jpg" alt="Masu traditionnel japonais en bois de hinoki avec assemblage arare-gumi — symbole de prospérité, 1 300 ans de tradition" loading="lazy">
           </div>
         </div>
       </div>
@@ -1594,7 +1746,7 @@
 
   <!-- Parallax Break -->
   <div class="parallax-break">
-    <img src="/images/products/masu-top.jpg" alt="La beaute du masu" data-parallax-img loading="lazy">
+    <img src="/images/products/masu-top.jpg" alt="Beauté du masu KUMIKI en bois de hinoki — bijou japonais artisanal, symbole de prospérité" data-parallax-img loading="lazy">
   </div>
 
   <!-- ═══════════════════════════════════════════
@@ -1609,14 +1761,14 @@
       </div>
       <div class="duality-grid">
         <div class="duality-card reveal img-reveal" data-img-reveal data-cursor-view>
-          <img src="/images/products/model-necklace.jpg" alt="Femme portant un collier masu KUMIKI" loading="lazy">
+          <img src="/images/products/model-necklace.jpg" alt="Femme portant un collier bijou masu KUMIKI en bois de hinoki et argent — artisanat japonais de luxe" loading="lazy">
           <div class="duality-card-label">
             <h3>Le porter</h3>
             <p>Les jours ou vous sortez, il vous accompagne.</p>
           </div>
         </div>
         <div class="duality-card reveal reveal-delay-1 img-reveal" data-img-reveal data-cursor-view>
-          <img src="/images/products/display-dark.jpg" alt="Ecrin d'exposition sur marbre noir, boucles d'oreilles fleur argent" loading="lazy">
+          <img src="/images/products/display-dark.jpg" alt="Écrin masu KUMIKI sur marbre noir — boucles d'oreilles fleur en argent et bois de hinoki, bijou japonais d'exception" loading="lazy">
           <div class="duality-card-label">
             <h3>L'exposer</h3>
             <p>De retour chez vous, il devient objet d'art.</p>
@@ -1639,7 +1791,7 @@
         <!-- Collier -->
         <div class="collection-item reveal">
           <div class="collection-img-wrap img-reveal" data-img-reveal data-cursor-view>
-            <img src="/images/products/necklace-white.jpg" alt="KUMIKI - Collier masu en bois de hinoki" loading="lazy">
+            <img src="/images/products/necklace-white.jpg" alt="KUMIKI collier masu — pendentif en bois de hinoki et argent 925, assemblage arare-gumi, bijou japonais artisanal" loading="lazy">
           </div>
           <h3>Collier</h3>
           <span class="collection-en">Necklace</span>
@@ -1651,7 +1803,7 @@
         <!-- Boucles d'oreilles -->
         <div class="collection-item reveal reveal-delay-1">
           <div class="collection-img-wrap img-reveal" data-img-reveal>
-            <img src="/images/products/earring-white-blossom.jpg" alt="KUMIKI - Boucles d'oreilles masu tonbodama" loading="lazy">
+            <img src="/images/products/earring-white-blossom.jpg" alt="KUMIKI boucles d'oreilles masu — masu hinoki avec perles tonbodama soufflées, bijoux japonais artisanaux" loading="lazy">
           </div>
           <h3>Boucles d'oreilles</h3>
           <span class="collection-en">Earrings</span>
@@ -1663,7 +1815,7 @@
         <!-- Kanzashi -->
         <div class="collection-item reveal reveal-delay-2">
           <div class="collection-img-wrap img-reveal" data-img-reveal>
-            <img src="/images/products/kanzashi.jpg" alt="KUMIKI - Kanzashi, epingle a cheveux japonaise en masu" loading="lazy">
+            <img src="/images/products/kanzashi.jpg" alt="KUMIKI kanzashi bijoux — épingle à cheveux japonaise intégrant un masu miniature en hinoki, artisanat arare-gumi" loading="lazy">
           </div>
           <h3>Kanzashi</h3>
           <span class="collection-en">Japanese Hair Pin</span>
@@ -1689,7 +1841,7 @@
       <span class="section-label font-en reveal">Gift</span>
       <h2 class="heading-lg reveal reveal-delay-1" style="margin-bottom: 24px;">Offrir le Japon a ceux que l'on aime.</h2>
       <div class="reveal reveal-delay-2" style="max-width: 480px; margin: 0 auto 40px;">
-        <img src="/images/products/gift-box.jpg" alt="KUMIKI - Coffret cadeau masu et mizuhiki" loading="lazy" style="width: 100%; border-radius: 4px; margin-bottom: 32px;">
+        <img src="/images/products/gift-box.jpg" alt="Coffret cadeau KUMIKI — écrin masu en hinoki avec emballage mizuhiki traditionnel, cadeau japonais luxe" loading="lazy" style="width: 100%; border-radius: 4px; margin-bottom: 32px;">
       </div>
       <p class="body-text reveal reveal-delay-2" style="max-width: 480px; margin: 0 auto 40px;">
         Le masu porte en lui la prosperite et le bonheur.<br>
@@ -1718,10 +1870,10 @@
       </div>
       <div class="badge-images reveal">
         <div class="badge-image img-reveal" data-img-reveal>
-          <img src="/images/products/masu-badge-women.jpg" alt="KUMIKI Badge Masu - Femme" loading="lazy">
+          <img src="/images/products/masu-badge-women.jpg" alt="Badge masu KUMIKI porté par une femme — accessoire magnétique offert avec chaque bijou japonais KUMIKI" loading="lazy">
         </div>
         <div class="badge-image img-reveal" data-img-reveal>
-          <img src="/images/products/masu-badge-men.jpg" alt="KUMIKI Badge Masu - Homme" loading="lazy">
+          <img src="/images/products/masu-badge-men.jpg" alt="Badge masu KUMIKI porté par un homme — privilège réservé aux propriétaires d'un bijou masu artisanal japonais" loading="lazy">
         </div>
       </div>
       <div class="badge-footer reveal" style="text-align: center; margin-top: 40px;">
@@ -1738,7 +1890,7 @@
        ═══════════════════════════════════════════ -->
   <section class="bespoke" id="bespoke">
     <div class="bespoke-bg">
-      <img src="/images/products/masu-top.jpg" alt="KUMIKI - Sur mesure" loading="lazy">
+      <img src="/images/products/masu-top.jpg" alt="KUMIKI sur mesure — bijou masu bespoke en bois de hinoki avec métaux précieux au choix, pièce unique artisanale japonaise" loading="lazy">
     </div>
     <div class="bespoke-content">
       <div class="bespoke-inner reveal">
@@ -1766,28 +1918,43 @@
       <h2 class="heading-lg reveal reveal-delay-1" style="text-align: center; margin-bottom: 48px;">Questions frequentes</h2>
 
       <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
-        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Qu'est-ce qu'un masu ?</h3>
-        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Le masu est une mesure sacree japonaise vieille de 1300 ans, taillee dans le bois de hinoki. Utilise lors des ceremonies et des celebrations, il symbolise la prosperite. KUMIKI le sublime en bijou d'exception : collier, boucles d'oreilles, kanzashi.</p>
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Qu'est-ce qu'un masu japonais ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Le masu est une mesure sacrée japonaise vieille de plus de 1 300 ans, taillée dans le bois de hinoki (cyprès japonais). Utilisé lors des cérémonies shinto et des célébrations, il symbolise la prospérité — « masu » signifiant « croître » en japonais. KUMIKI le sublime en bijou d'exception : collier, boucles d'oreilles, kanzashi.</p>
+      </div>
+
+      <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Qu'est-ce que KUMIKI ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">KUMIKI est une marque de bijoux japonais créée par FOMUS LLC, spécialisée dans les bijoux masu en bois de hinoki. Chaque pièce intègre un masu miniature — le plus petit au monde — aux parois de 1,6 mm, assemblé selon la technique arare-gumi transmise depuis 1 300 ans. Production limitée à 30 pièces par mois, toutes faites à la main.</p>
       </div>
 
       <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
         <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Qu'est-ce que le kumiki ?</h3>
-        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Le kumiki est l'art ancestral d'assembler le bois sans clou. Cette technique, nee il y a plus de 1300 ans, se retrouve dans l'assemblage arare-gumi de chaque masu. KUMIKI en porte le nom.</p>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Le kumiki est l'art ancestral japonais d'assembler le bois sans clou ni colle, né il y a plus de 1 300 ans. L'assemblage arare-gumi, visible aux angles du masu, est la signature de cette technique. La marque KUMIKI porte ce nom en hommage à cet héritage artisanal millénaire.</p>
       </div>
 
       <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
-        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Quels sont les materiaux utilises ?</h3>
-        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Chaque bijou associe le bois de hinoki (cypres japonais) a des metaux precieux, choisis selon la piece et les options souhaitees. Ecrin masu et emballage mizuhiki inclus.</p>
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Quelle est la taille du bijou masu KUMIKI ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Le masu KUMIKI présente une paroi de seulement 1,6 mm, ce qui en fait le plus petit masu en hinoki au monde. Malgré cette précision extrême, il conserve l'assemblage arare-gumi traditionnel, sans clou ni colle. Il est conçu pour être porté au quotidien comme pendentif, boucles d'oreilles ou kanzashi.</p>
       </div>
 
       <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
-        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Comment commander ?</h3>
-        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Veuillez nous contacter via le formulaire ci-dessous. Chaque piece est realisee a la main sur commande. Delai de fabrication : 2 a 4 semaines, plus l'expedition internationale.</p>
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Quels métaux KUMIKI utilise-t-il ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Chaque bijou KUMIKI associe le bois de hinoki (cyprès japonais) à des métaux précieux : Argent 925, Or, Or 18 carats ou Platine. Les boucles d'oreilles peuvent intégrer des tonbodama (perles de verre soufflées à la main), des temari ou des pierres naturelles. Chaque bijou est livré avec son écrin masu et un emballage mizuhiki traditionnel.</p>
+      </div>
+
+      <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Le bijou masu KUMIKI convient-il comme cadeau japonais de luxe ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Oui. Chaque bijou KUMIKI est présenté dans un écrin masu en hinoki, orné d'un emballage mizuhiki traditionnel, et accompagné d'un badge masu exclusif offert avec chaque création. Symbolisant la prospérité et le bonheur, il constitue un cadeau d'exception pour les anniversaires, mariages et occasions importantes — idéal pour les amateurs de culture japonaise.</p>
+      </div>
+
+      <div class="faq-item reveal" style="border-bottom: 1px solid var(--border-subtle); padding: 32px 0;">
+        <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Combien de pièces KUMIKI sont fabriquées chaque mois ?</h3>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">La production de KUMIKI est volontairement limitée à 30 pièces par mois au maximum. Chaque bijou est intégralement réalisé à la main par des artisans japonais selon les techniques traditionnelles. Cette rareté garantit que chaque pièce est unique au monde. Le délai de fabrication est de 2 à 4 semaines après commande.</p>
       </div>
 
       <div class="faq-item reveal" style="padding: 32px 0;">
         <h3 style="font-size: 1.05rem; font-weight: 400; margin-bottom: 12px; color: var(--text-primary);">Le badge masu est-il en vente ?</h3>
-        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Non. Le badge masu est un privilege reserve aux proprietaires d'un bijou KUMIKI. Magnetique, il se porte sans abimer vos vetements. Il vous est offert avec chaque creation.</p>
+        <p style="font-size: 0.9rem; line-height: 2.2; color: var(--text-secondary);">Non. Le badge masu est un privilège réservé aux propriétaires d'un bijou KUMIKI, offert avec chaque création. Magnétique, il se porte sans abîmer vos vêtements. Il ne peut pas être acheté séparément.</p>
       </div>
     </div>
   </section>
