@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUMIKI | 枡ジュエリー — 歴史を、纏う。ひのき枡のジュエリー</title>
-  <meta name="description" content="KUMIKIは、1300年の歴史を持つひのき枡を世界最小のジュエリーに。ネックレス、耳飾り、かんざし。歴史を纏う、枡ジュエリー。">
+  <meta name="description" content="KUMIKIは、1300年の職人技を世界最小・壁厚1.6mmの枡ジュエリーに。ネックレス、耳飾り、かんざし。歴史を纏う、枡ジュエリー。">
   <meta name="keywords" content="枡ジュエリー,KUMIKI,ひのきジュエリー,伝統工芸,枡ネックレス,枡耳飾り,かんざし,組木,日本の伝統美">
 
   <!-- hreflang -->
@@ -14,7 +14,7 @@
 
   <!-- OGP -->
   <meta property="og:title" content="KUMIKI | 枡ジュエリー — 歴史を、纏う。">
-  <meta property="og:description" content="1300年の歴史を持つひのき枡が、2cmのジュエリーに。世界最小の枡ジュエリー。">
+  <meta property="og:description" content="1300年の職人技を持つひのき枡が、壁厚1.6mmのジュエリーに。世界最小の枡ジュエリー。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kumiki.fomusglobal.com/">
   <meta property="og:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
@@ -24,7 +24,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KUMIKI | 枡ジュエリー — 歴史を、纏う。">
-  <meta name="twitter:description" content="1300年の歴史を持つひのき枡が、2cmのジュエリーに。世界最小の枡ジュエリー。">
+  <meta name="twitter:description" content="1300年の職人技を持つひのき枡が、壁厚1.6mmのジュエリーに。世界最小の枡ジュエリー。">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
@@ -345,14 +345,22 @@
     }
     .hero-brand {
       font-family: 'Shippori Mincho', serif;
-      font-size: clamp(2rem, 6vw, 4rem); font-weight: 500;
-      letter-spacing: 0.4em; color: white; margin-bottom: 24px;
+      font-size: clamp(1.8rem, 5vw, 3.5rem); font-weight: 500;
+      letter-spacing: 0.2em; color: white; margin-bottom: 20px;
       opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+    .hero-sub {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(0.85rem, 1.8vw, 1.1rem); font-weight: 400;
+      letter-spacing: 0.25em; color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
     }
     .hero-tagline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(0.9rem, 2vw, 1.2rem); font-weight: 300;
-      letter-spacing: 0.3em; color: rgba(255, 255, 255, 0.75);
+      font-size: clamp(0.8rem, 1.6vw, 1rem); font-weight: 300;
+      letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
       opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
     }
     .hero-line {
@@ -433,6 +441,35 @@
       font-size: clamp(5rem, 12vw, 10rem); font-weight: 300;
       color: rgba(201, 168, 108, 0.08); line-height: 1;
       margin-bottom: -40px; user-select: none; pointer-events: none;
+    }
+
+    /* WHY KUMIKI */
+    .why-kumiki { padding: var(--section-gap) 0; background: var(--stone); }
+    .why-kumiki-header { text-align: center; margin-bottom: 80px; }
+    .why-kumiki-header .heading-lg { margin-bottom: 16px; }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2px;
+      max-width: 960px; margin: 0 auto;
+    }
+    @media (min-width: 768px) { .why-grid { grid-template-columns: 1fr 1fr; gap: 2px; } }
+    .why-item {
+      padding: 48px 40px; background: var(--ivory);
+      transition: background 0.4s ease;
+    }
+    .why-item:hover { background: white; }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.4em; color: var(--gold);
+      margin-bottom: 24px; display: block;
+    }
+    .why-title {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 500;
+      letter-spacing: 0.1em; margin-bottom: 16px; color: var(--text-primary);
+    }
+    .why-body {
+      font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+      line-height: 2.2; color: var(--text-secondary); letter-spacing: 0.04em;
     }
 
     /* DUALITY */
@@ -571,13 +608,14 @@
 
     /* RESPONSIVE */
     @media (max-width: 767px) {
-      .hero-brand { letter-spacing: 0.25em; }
+      .hero-brand { letter-spacing: 0.1em; }
       .kumiki-grid { gap: 48px; }
       .duality-grid { gap: 16px; }
       .collection-grid { gap: 48px; padding: 0 16px; }
       .bespoke-grid { grid-template-columns: 1fr; }
       .bespoke-inner { max-width: none; margin: 0; }
       .bespoke-photo { min-height: 0; height: 56vh; }
+      .why-item { padding: 36px 28px; }
     }
     @media (min-width: 1200px) { .collection-grid { gap: 48px; } }
   </style>
@@ -621,6 +659,7 @@
     <div class="mobile-menu-body">
       <a href="#kumiki" onclick="closeMobile()">組木とは</a>
       <a href="#masu" onclick="closeMobile()">枡の物語</a>
+      <a href="#why" onclick="closeMobile()">なぜKUMIKIか</a>
       <a href="#duality" onclick="closeMobile()">身につける × 飾る</a>
       <a href="collection.html" onclick="closeMobile()">コレクション</a>
       <a href="gift.html" onclick="closeMobile()">ギフト</a>
@@ -641,8 +680,9 @@
   <section class="hero">
     <img src="/images/products/model-jp.jpg" alt="KUMIKI 枡ジュエリー着用モデル" class="hero-img">
     <div class="hero-content" data-parallax="0.15">
-      <h1 class="hero-brand split-text" data-split>歴史を、纏う。</h1>
-      <p class="hero-tagline font-en">A Piece of Japan You Can Wear</p>
+      <h1 class="hero-brand split-text" data-split>1300年の職人技を、首元に。</h1>
+      <p class="hero-sub">世界最小の枡ジュエリー</p>
+      <p class="hero-tagline font-en">The World's Smallest Masu Jewelry</p>
       <div class="hero-line"></div>
     </div>
     <div class="hero-scroll">
@@ -739,6 +779,50 @@
           <div class="masu-story-image reveal img-reveal" data-img-reveal>
             <img src="/images/products/masu-original.jpg" alt="ひのき枡 あられ組" loading="lazy">
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY KUMIKI -->
+  <section class="why-kumiki" id="why">
+    <div class="container">
+      <div class="why-kumiki-header">
+        <span class="section-label font-en">Why KUMIKI</span>
+        <h2 class="heading-lg">なぜ、KUMIKIなのか。</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-num font-en">01</span>
+          <h3 class="why-title">世界最小の枡</h3>
+          <p class="why-body">
+            壁厚1.6mmの木の中に、1300年の歴史。<br>
+            世界でKUMIKIだけが実現した、枡のジュエリー。
+          </p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">02</span>
+          <h3 class="why-title">職人による手仕事</h3>
+          <p class="why-body">
+            ひとつひとつ、手作業で仕上げます。<br>
+            月30点のみ。同じものは、世界に存在しない。
+          </p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">03</span>
+          <h3 class="why-title">ひのきの香り</h3>
+          <p class="why-body">
+            身につけるたびに漂う、ひのきの気配。<br>
+            日本の森の記憶を、毎日そばに。
+          </p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">04</span>
+          <h3 class="why-title">縁起を、纏う</h3>
+          <p class="why-body">
+            「ますます（益々）」——繁栄と幸福を願う、日本の伝統。<br>
+            纏うたびに、吉兆の気配。
+          </p>
         </div>
       </div>
     </div>
@@ -915,7 +999,7 @@
         <a href="collection.html">コレクション</a>
         <a href="gift.html">ギフト</a>
         <a href="badge.html">枡バッジ</a>
-        <a href="https://instagram.com/kumiki" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://instagram.com/kumiki.jp" target="_blank" rel="noopener">Instagram</a>
         <a href="mailto:contact@fomus.jp">contact@fomus.jp</a>
         <a href="en/index.html" class="font-en">English</a>
         <a href="fr/index.html" class="font-en">Français</a>

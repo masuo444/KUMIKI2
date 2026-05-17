@@ -14,7 +14,7 @@
 
   <!-- OGP -->
   <meta property="og:title" content="KUMIKI | Bijoux Masu - Le Japon, a porter.">
-  <meta property="og:description" content="1300 ans d'histoire. 2 cm de perfection. Le plus petit masu au monde, devenu bijou et objet d'art.">
+  <meta property="og:description" content="1300 ans d'histoire. Paroi de 1,6 mm. Le plus petit masu au monde, devenu bijou d'exception.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kumiki.fomusglobal.com/fr/">
   <meta property="og:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
@@ -24,7 +24,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KUMIKI | Bijoux Masu - Le Japon, a porter.">
-  <meta name="twitter:description" content="1300 ans d'histoire. 2 cm de perfection. Le plus petit masu au monde, devenu bijou et objet d'art.">
+  <meta name="twitter:description" content="1300 ans d'histoire. Paroi de 1,6 mm. Le plus petit masu au monde, devenu bijou d'exception.">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
@@ -272,10 +272,8 @@
        UTILITIES
        ═══════════════════════════════════════════ */
     .reveal {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 1;
+      transform: none;
     }
     .reveal.active {
       opacity: 1;
@@ -633,21 +631,32 @@
 
     .hero-brand {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 7vw, 5rem);
-      font-weight: 300;
-      letter-spacing: 0.5em;
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: 0.08em;
       color: white;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      line-height: 1.4;
       opacity: 0;
       animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
     }
-
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
+    }
     .hero-tagline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      font-size: clamp(0.8rem, 1.6vw, 1rem);
       font-weight: 300;
-      letter-spacing: 0.3em;
-      color: rgba(255, 255, 255, 0.75);
+      letter-spacing: 0.4em;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
       opacity: 0;
       animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
     }
@@ -1347,6 +1356,33 @@
     .breadcrumb a:hover { color: var(--gold); }
     .breadcrumb span { margin: 0 4px; }
 
+    /* WHY KUMIKI */
+    .why-kumiki { padding: var(--section-gap) 0; background: var(--stone); }
+    .why-kumiki-header { text-align: center; margin-bottom: 80px; }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2px;
+      max-width: 960px; margin: 0 auto;
+    }
+    @media (min-width: 768px) { .why-grid { grid-template-columns: 1fr 1fr; gap: 2px; } }
+    .why-item {
+      padding: 48px 40px; background: var(--ivory);
+      transition: background 0.4s ease;
+    }
+    .why-item:hover { background: white; }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.4em; color: var(--gold);
+      margin-bottom: 24px; display: block;
+    }
+    .why-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 500;
+      letter-spacing: 0.1em; margin-bottom: 16px; color: var(--text-primary);
+    }
+    .why-body {
+      font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+      line-height: 2.2; color: var(--text-secondary); letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body>
@@ -1364,6 +1400,7 @@
       <ul class="nav-links">
         <li><a href="#kumiki">Kumiki</a></li>
         <li><a href="#masu">Le Masu</a></li>
+        <li><a href="#why">Pourquoi KUMIKI</a></li>
         <li><a href="#collection">Collection</a></li>
         <li><a href="#contact">Nous contacter</a></li>
       </ul>
@@ -1391,6 +1428,7 @@
     <div class="mobile-menu-body">
       <a href="#kumiki" onclick="closeMobile()">Kumiki</a>
       <a href="#masu" onclick="closeMobile()">Le Masu</a>
+      <a href="#why" onclick="closeMobile()">Pourquoi KUMIKI</a>
       <a href="#duality" onclick="closeMobile()">Le porter. L'exposer.</a>
       <a href="#collection" onclick="closeMobile()">Collection</a>
       <a href="#contact" onclick="closeMobile()">Nous contacter</a>
@@ -1412,8 +1450,9 @@
   <section class="hero">
     <img src="/images/products/model-jp.jpg" alt="KUMIKI - Bijou masu en bois de hinoki, collier et boucles d'oreilles" class="hero-img">
     <div class="hero-content" data-parallax="0.15">
-      <h1 class="hero-brand font-en split-text" data-split>KUMIKI</h1>
-      <p class="hero-tagline">Le Japon, a porter.</p>
+      <h1 class="hero-brand font-en">1 300 ans d'artisanat japonais,<br>a porter.</h1>
+      <p class="hero-sub font-en">Le plus petit masu au monde, en bijou.</p>
+      <p class="hero-tagline font-en">A porter · A exposer · A offrir</p>
       <div class="hero-line"></div>
     </div>
     <div class="hero-scroll">
@@ -1516,6 +1555,38 @@
           <div class="masu-story-image reveal img-reveal" data-img-reveal>
             <img src="/images/products/masu-original.jpg" alt="Masu traditionnel en bois de hinoki - assemblage arare-gumi" loading="lazy">
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI KUMIKI -->
+  <section class="why-kumiki" id="why">
+    <div class="container">
+      <div class="why-kumiki-header">
+        <span class="section-label font-en">Why KUMIKI</span>
+        <h2 class="heading-lg">Pourquoi KUMIKI ?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-num font-en">01</span>
+          <h3 class="why-title">Le plus petit masu au monde</h3>
+          <p class="why-body">Paroi de 1,6 mm. Dans ce bois, 1 300 ans d'histoire. Seul KUMIKI a rendu cela possible.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">02</span>
+          <h3 class="why-title">Fait a la main</h3>
+          <p class="why-body">Chaque piece est finie a la main. Seulement 30 pieces par mois. Aucune n'est identique dans le monde.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">03</span>
+          <h3 class="why-title">Le parfum du hinoki</h3>
+          <p class="why-body">Une trace discrete de cypres japonais a chaque port. La memoire des forets du Japon, pres de vous.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">04</span>
+          <h3 class="why-title">Porter la prosperite</h3>
+          <p class="why-body">"Masu" signifie "croitre" en japonais — symbole de prosperite et de bonheur depuis des siecles.</p>
         </div>
       </div>
     </div>

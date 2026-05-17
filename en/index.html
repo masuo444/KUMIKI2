@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUMIKI | Masu Jewelry - The World's Smallest Hinoki Masu, Worn as Art</title>
-  <meta name="description" content="KUMIKI transforms the 1,300-year-old Japanese hinoki masu into the world's smallest jewelry. Necklaces, earrings, kanzashi. Inquire here.">
+  <meta name="description" content="KUMIKI transforms the 1,300-year-old Japanese hinoki masu into the world's smallest jewelry. Wall thickness: 1.6mm. Necklaces, earrings, kanzashi. Inquire here.">
   <meta name="keywords" content="masu jewelry,kumiki,KUMIKI,hinoki jewelry,Japanese craftsmanship,artisan jewelry,kanzashi,masu,handmade jewelry,wabi-sabi">
 
   <!-- hreflang -->
@@ -14,7 +14,7 @@
 
   <!-- OGP -->
   <meta property="og:title" content="KUMIKI | Masu Jewelry - A Piece of Japan You Can Wear">
-  <meta property="og:description" content="A 1,300-year-old masu, now a 2cm jewel. The world's smallest masu jewelry and interior art objects.">
+  <meta property="og:description" content="A 1,300-year-old masu. Wall thickness: 1.6mm. The world's smallest masu jewelry.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kumiki.fomusglobal.com/en/">
   <meta property="og:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
@@ -24,7 +24,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KUMIKI | Masu Jewelry - A Piece of Japan You Can Wear">
-  <meta name="twitter:description" content="A 1,300-year-old masu, now a 2cm jewel. The world's smallest masu jewelry and interior art objects.">
+  <meta name="twitter:description" content="A 1,300-year-old masu. Wall thickness: 1.6mm. The world's smallest masu jewelry.">
   <meta name="twitter:image" content="https://kumiki.fomusglobal.com/images/products/model-jp.jpg">
 
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='80' x='50%' text-anchor='middle'>〼</text></svg>">
@@ -233,9 +233,7 @@
 
     /* UTILITIES */
     .reveal {
-      opacity: 0; transform: translateY(50px);
-      transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+      opacity: 1; transform: none;
     }
     .reveal.active { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.15s; }
@@ -406,14 +404,22 @@
     }
     .hero-brand {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.4rem, 7vw, 5rem); font-weight: 300;
-      letter-spacing: 0.5em; color: white; margin-bottom: 24px;
+      font-size: clamp(1.8rem, 5vw, 3.5rem); font-weight: 400;
+      letter-spacing: 0.08em; color: white; margin-bottom: 20px; line-height: 1.4;
       opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(0.85rem, 1.8vw, 1.1rem); font-weight: 400;
+      letter-spacing: 0.25em; color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
     }
     .hero-tagline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(0.9rem, 2vw, 1.2rem); font-weight: 300;
-      letter-spacing: 0.3em; color: rgba(255, 255, 255, 0.75);
+      font-size: clamp(0.8rem, 1.6vw, 1rem); font-weight: 300;
+      letter-spacing: 0.4em; color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
       opacity: 0; animation: fadeUp 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
     }
     .hero-line {
@@ -658,6 +664,34 @@
     .breadcrumb a { color: #999; text-decoration: none; }
     .breadcrumb a:hover { color: var(--gold); }
     .breadcrumb span { margin: 0 4px; }
+
+    /* WHY KUMIKI */
+    .why-kumiki { padding: var(--section-gap) 0; background: var(--stone); }
+    .why-kumiki-header { text-align: center; margin-bottom: 80px; }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr; gap: 2px;
+      max-width: 960px; margin: 0 auto;
+    }
+    @media (min-width: 768px) { .why-grid { grid-template-columns: 1fr 1fr; gap: 2px; } }
+    .why-item {
+      padding: 48px 40px; background: var(--ivory);
+      transition: background 0.4s ease;
+    }
+    .why-item:hover { background: white; }
+    .why-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px; letter-spacing: 0.4em; color: var(--gold);
+      margin-bottom: 24px; display: block;
+    }
+    .why-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 500;
+      letter-spacing: 0.1em; margin-bottom: 16px; color: var(--text-primary);
+    }
+    .why-body {
+      font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+      line-height: 2.2; color: var(--text-secondary); letter-spacing: 0.04em;
+    }
   </style>
 </head>
 <body>
@@ -671,6 +705,7 @@
       <ul class="nav-links">
         <li><a href="#kumiki">Kumiki</a></li>
         <li><a href="#masu">The Masu</a></li>
+        <li><a href="#why">Why KUMIKI</a></li>
         <li><a href="#collection">Collection</a></li>
         <li><a href="#contact">Inquire</a></li>
       </ul>
@@ -698,6 +733,7 @@
     <div class="mobile-menu-body">
       <a href="#kumiki" onclick="closeMobile()">Kumiki</a>
       <a href="#masu" onclick="closeMobile()">The Masu</a>
+      <a href="#why" onclick="closeMobile()">Why KUMIKI</a>
       <a href="#duality" onclick="closeMobile()">Wear it. Display it.</a>
       <a href="#collection" onclick="closeMobile()">Collection</a>
       <a href="#contact" onclick="closeMobile()">Inquire</a>
@@ -717,8 +753,9 @@
   <section class="hero">
     <img src="/images/products/model-jp.jpg" alt="KUMIKI masu jewelry - necklace and earrings" class="hero-img">
     <div class="hero-content" data-parallax="0.15">
-      <h1 class="hero-brand font-en split-text" data-split>KUMIKI</h1>
-      <p class="hero-tagline">A Piece of Japan You Can Wear</p>
+      <h1 class="hero-brand font-en">Wear 1,300 Years of<br>Japanese Craftsmanship.</h1>
+      <p class="hero-sub font-en">The World's Smallest Masu Jewelry</p>
+      <p class="hero-tagline font-en">Worn · Displayed · Given</p>
       <div class="hero-line"></div>
     </div>
     <div class="hero-scroll">
@@ -817,6 +854,38 @@
           <div class="masu-story-image reveal img-reveal" data-img-reveal>
             <img src="/images/products/masu-original.jpg" alt="Hinoki masu - arare-gumi joinery" loading="lazy">
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY KUMIKI -->
+  <section class="why-kumiki" id="why">
+    <div class="container">
+      <div class="why-kumiki-header">
+        <span class="section-label font-en">Why KUMIKI</span>
+        <h2 class="heading-lg">Why KUMIKI?</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-num font-en">01</span>
+          <h3 class="why-title">The World's Smallest Masu</h3>
+          <p class="why-body">Wall thickness: 1.6mm. Inside the wood, 1,300 years of history. Only KUMIKI has made this possible.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">02</span>
+          <h3 class="why-title">Made by Hand</h3>
+          <p class="why-body">Each piece is finished by hand. Only 30 pieces per month. No two are the same anywhere in the world.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">03</span>
+          <h3 class="why-title">The Scent of Hinoki</h3>
+          <p class="why-body">A quiet trace of hinoki cypress with every wear. The memory of Japan's forests, close to you every day.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num font-en">04</span>
+          <h3 class="why-title">Wear Good Fortune</h3>
+          <p class="why-body">"Masu" means "to increase" in Japanese — a symbol of prosperity and happiness worn through the centuries.</p>
         </div>
       </div>
     </div>
