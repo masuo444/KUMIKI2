@@ -34,6 +34,38 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- COLLECTION -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/collection.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/collection.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/collection.html"/>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- NECKLACE -->
   <url>
     <loc>https://kumiki.fomusglobal.com/necklace.html</loc>
