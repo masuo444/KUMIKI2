@@ -635,15 +635,14 @@
 
     .nav-links a:hover::after { width: 100%; }
 
-    .nav-lang {
-      display: none; gap: 12px; align-items: center;
-    }
-    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang { display: flex; gap: 8px; align-items: center; }
+    @media (min-width: 1024px) { .nav-lang { gap: 12px; } }
     .nav-lang a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 13px; letter-spacing: 0.12em;
+      font-size: 11px; letter-spacing: 0.12em;
       color: rgba(255,255,255,0.7); transition: color 0.3s;
     }
+    @media (min-width: 1024px) { .nav-lang a { font-size: 13px; } }
     .nav.scrolled .nav-lang a { color: #999; }
     .nav-lang a:hover { color: var(--gold); }
     .nav-lang a.active { color: var(--gold); }
@@ -713,9 +712,7 @@
     }
     .mobile-menu-body a:hover { color: var(--gold); }
     .mobile-menu-body a:hover::after { opacity: 1; }
-    .mobile-menu-footer {
-      padding: 36px 44px; border-top: 1px solid var(--border-subtle);
-    }
+    .mobile-menu-footer { display: none; }
     .mobile-lang { display: flex; gap: 28px; }
     .mobile-lang a {
       font-family: 'Cormorant Garamond', serif; font-size: 13px;
