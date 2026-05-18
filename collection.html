@@ -83,36 +83,69 @@
     .nav {
       position: fixed;
       inset: 0 0 auto;
-      z-index: 20;
-      padding: 24px 32px;
-      background: rgba(250,249,247,.94);
+      z-index: 100;
+      padding: 20px 32px;
+      background: rgba(250,249,247,.96);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--line);
     }
     .nav-inner {
       max-width: 1440px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 28px;
     }
     .logo {
-      justify-self: start;
       font-size: 1.45rem;
       letter-spacing: .4em;
     }
-    .nav-links,
-    .nav-actions {
-      display: flex;
+    .nav-links {
+      display: none;
       gap: 30px;
       align-items: center;
       list-style: none;
       font-size: 12px;
       letter-spacing: .18em;
     }
-    .nav-links { justify-self: center; }
-    .nav-actions { justify-self: end; }
+    @media (min-width: 1024px) { .nav-links { display: flex; } }
+    .nav-right { display: flex; gap: 16px; align-items: center; }
+    .nav-lang { display: flex; gap: 8px; align-items: center; }
+    @media (min-width: 1024px) { .nav-lang { gap: 12px; } }
+    .nav-lang a { font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.12em; color: #999; transition: color 0.3s; }
+    @media (min-width: 1024px) { .nav-lang a { font-size: 13px; } }
+    .nav-lang a:hover { color: var(--gold); }
+    .nav-lang a.active { color: var(--gold); }
+    .nav-lang-divider { color: #ccc; font-size: 10px; }
+    .nav-menu-btn { display: block; background: none; border: none; cursor: pointer; color: #555; padding: 0; }
+    @media (min-width: 1024px) { .nav-menu-btn { display: none; } }
+    .nav-menu-btn svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .mobile-menu {
+      position: fixed; inset: 0; background: var(--ivory); z-index: 200;
+      transform: translateX(-100%); transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex; flex-direction: column;
+    }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-header {
+      padding: 36px 44px; display: flex; justify-content: space-between;
+      align-items: center; border-bottom: 1px solid var(--line);
+    }
+    .mobile-menu-header span { font-family: 'Cormorant Garamond', serif; font-size: 10px; letter-spacing: 0.55em; color: var(--charcoal); opacity: 0.45; text-transform: uppercase; }
+    .mobile-menu-close { background: none; border: none; cursor: pointer; padding: 0; }
+    .mobile-menu-close svg { width: 26px; height: 26px; stroke: var(--charcoal); fill: none; stroke-width: 1.2; }
+    .mobile-menu-body {
+      flex: 1; display: flex; flex-direction: column; justify-content: center;
+      padding: 16px 44px 48px; gap: 0;
+    }
+    .mobile-menu-body a {
+      font-family: 'Shippori Mincho', serif; font-size: 0.875rem;
+      letter-spacing: 0.25em; color: var(--charcoal);
+      padding: 16px 0; border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+      transition: color 0.4s;
+    }
+    .mobile-menu-body a:hover { color: var(--gold); }
     .nav a:hover, .nav .active { color: var(--gold); }
     .hero {
       background: #050505;
@@ -392,12 +425,35 @@
         <li><a href="index.html#duality">飾る</a></li>
         <li><a href="index.html#contact">お問い合わせ</a></li>
       </ul>
-      <div class="nav-actions">
-        <a href="index.html">戻る</a>
-        <a class="active" href="collection.html">JP</a>
+      <div class="nav-right">
+        <div class="nav-lang">
+          <a href="collection.html" class="active font-en">JA</a>
+          <span class="nav-lang-divider">|</span>
+          <a href="en/index.html" class="font-en">EN</a>
+          <span class="nav-lang-divider">|</span>
+          <a href="fr/index.html" class="font-en">FR</a>
+        </div>
+        <button class="nav-menu-btn" onclick="document.getElementById('mobileMenu').classList.add('open')" aria-label="メニューを開く">
+          <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
       </div>
     </div>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="ナビゲーションメニュー">
+    <div class="mobile-menu-header">
+      <span class="font-en">KUMIKI</span>
+      <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('open')" aria-label="閉じる">
+        <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu-body">
+      <a href="collection.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">コレクション</a>
+      <a href="index.html#duality" onclick="document.getElementById('mobileMenu').classList.remove('open')">飾る</a>
+      <a href="index.html#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">お問い合わせ</a>
+      <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">トップへ戻る</a>
+    </div>
+  </div>
 
   <main>
     <header class="hero">
@@ -589,6 +645,13 @@
     if (validCategories.includes(initialCategory)) {
       setFilter(initialCategory, false);
     }
+
+    (function() {
+      var menu = document.getElementById('mobileMenu');
+      new MutationObserver(function() {
+        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+      }).observe(menu, { attributes: true, attributeFilter: ['class'] });
+    })();
   </script>
 </body>
 </html>
