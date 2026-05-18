@@ -131,9 +131,9 @@
     .mobile-menu-header span { font-family: 'Cormorant Garamond', serif; font-size: 13px; letter-spacing: 0.4em; color: var(--charcoal); opacity: 0.7; }
     .mobile-menu-close svg { width: 22px; height: 22px; stroke: var(--text-primary); fill: none; stroke-width: 1.5; }
     .mobile-menu-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 48px; gap: 36px; }
-    .mobile-menu-body a { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.15em; color: var(--text-primary); transition: color 0.3s; }
+    .mobile-menu-body a { font-family: 'Cormorant Garamond', serif; font-size: 0.875rem; letter-spacing: 0.15em; color: var(--text-primary); transition: color 0.3s; }
     .mobile-menu-body a:hover { color: var(--gold); }
-    .mobile-menu-footer { padding: 32px 48px; border-top: 1px solid var(--border-subtle); }
+    .mobile-menu-footer { display: none; }
     .mobile-menu-footer a { font-family: 'Cormorant Garamond', serif; font-size: 15px; letter-spacing: 0.15em; color: var(--gold); margin-right: 24px; }
 
     .hero { position: relative; width: 100%; height: 70vh; min-height: 500px; background: #000; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -229,13 +229,11 @@
     .breadcrumb a { color: #999; text-decoration: none; } .breadcrumb a:hover { color: var(--gold); } .breadcrumb span { margin: 0 4px; }
 
     /* Language Switcher */
-    .nav-lang {
-      display: none; gap: 12px; align-items: center;
-    }
-    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang { display: flex; gap: 8px; align-items: center; }
+    @media (min-width: 1024px) { .nav-lang { gap: 12px; } }
     .nav-lang a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 13px; letter-spacing: 0.12em;
+      font-size: 11px; letter-spacing: 0.12em;
       color: rgba(255,255,255,0.7); transition: color 0.3s;
     }
     .nav.scrolled .nav-lang a { color: #999; }

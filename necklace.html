@@ -345,13 +345,11 @@
       padding: 48px; gap: 36px;
     }
     .mobile-menu-body a {
-      font-family: 'Shippori Mincho', serif; font-size: 1.5rem;
+      font-family: 'Shippori Mincho', serif; font-size: 0.875rem;
       letter-spacing: 0.15em; color: var(--text-primary); transition: color 0.3s;
     }
     .mobile-menu-body a:hover { color: var(--charcoal); opacity: 0.7; }
-    .mobile-menu-footer {
-      padding: 32px 48px; border-top: 1px solid var(--border-subtle);
-    }
+    .mobile-menu-footer { display: none; }
     .mobile-menu-footer a {
       font-family: 'Cormorant Garamond', serif; font-size: 15px;
       letter-spacing: 0.15em; color: var(--charcoal); opacity: 0.7;
@@ -611,13 +609,11 @@
     .breadcrumb span { margin: 0 4px; }
 
     /* Language Switcher */
-    .nav-lang {
-      display: none; gap: 12px; align-items: center;
-    }
-    @media (min-width: 1024px) { .nav-lang { display: flex; } }
+    .nav-lang { display: flex; gap: 8px; align-items: center; }
+    @media (min-width: 1024px) { .nav-lang { gap: 12px; } }
     .nav-lang a {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 13px; letter-spacing: 0.12em;
+      font-size: 11px; letter-spacing: 0.12em;
       color: rgba(255,255,255,0.7); transition: color 0.3s;
     }
     .nav.scrolled .nav-lang a { color: #999; }
