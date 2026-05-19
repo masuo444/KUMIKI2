@@ -438,8 +438,10 @@
        UTILITIES
        ═══════════════════════════════════════════ */
     .reveal {
-      opacity: 1;
-      transform: none;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal.active {
       opacity: 1;
