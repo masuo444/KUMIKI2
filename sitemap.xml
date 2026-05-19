@@ -226,6 +226,38 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- FAQ -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/fr/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://kumiki.fomusglobal.com/fr/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/faq.html"/>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- GIFT -->
   <url>
     <loc>https://kumiki.fomusglobal.com/gift.html</loc>
