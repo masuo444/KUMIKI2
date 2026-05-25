@@ -67,6 +67,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
   <style>
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --gold: #C9A86C;
@@ -466,24 +467,25 @@
       <div class="container hero-inner">
         <div class="genre-grid" aria-label="ジャンルで絞り込む">
           <button class="genre-card" type="button" data-filter="earwear" aria-pressed="false">
-            <span class="genre-card-photo"><img src="images/generated-luxury-all/silver-flower-pierce-product.webp" alt=""></span>
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/silver-flower-pierce-product.webp" alt="KUMIKIのピアス・イヤリングコレクション"></span>
             <span class="genre-card-body"><strong>耳飾り</strong><span class="font-en">Earrings</span></span>
           </button>
           <button class="genre-card" type="button" data-filter="necklace" aria-pressed="false">
-            <span class="genre-card-photo"><img src="images/generated-luxury-all/yellow-masu-necklace-wear.webp" alt=""></span>
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/yellow-masu-necklace-wear.webp" alt="KUMIKIのネックレスコレクション"></span>
             <span class="genre-card-body"><strong>ネックレス</strong><span class="font-en">Necklace</span></span>
           </button>
           <button class="genre-card" type="button" data-filter="kanzashi" aria-pressed="false">
-            <span class="genre-card-photo"><img src="images/generated-luxury-all/masu-kanzashi-product.webp" alt=""></span>
+            <span class="genre-card-photo"><img src="images/generated-luxury-all/masu-kanzashi-product.webp" alt="KUMIKIのかんざしコレクション"></span>
             <span class="genre-card-body"><strong>かんざし</strong><span class="font-en">Kanzashi</span></span>
           </button>
           <button class="genre-card" type="button" data-filter="badge" aria-pressed="false">
-            <span class="genre-card-photo"><img src="images/products/masu-badge.jpg" alt=""></span>
+            <span class="genre-card-photo"><img src="images/products/masu-badge.jpg" alt="KUMIKIの枡バッジ"></span>
             <span class="genre-card-body"><strong>バッジ</strong><span class="font-en">Badge</span></span>
           </button>
         </div>
       </div>
     </header>
+    <h1 class="sr-only">KUMIKIコレクション — 枡ジュエリー全作品一覧</h1>
 
     <section class="section" id="works">
       <div class="container">
