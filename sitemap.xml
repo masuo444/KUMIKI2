@@ -290,4 +290,66 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- JOURNAL -->
+  <url>
+    <loc>https://kumiki.fomusglobal.com/journal/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/journal/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/journal/what-is-masu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/what-is-masu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/what-is-masu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/what-is-masu.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/journal/what-is-masu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/what-is-masu.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/what-is-masu.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/what-is-masu.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/journal/hinoki-jewelry.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/hinoki-jewelry.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/japanese-wood-jewelry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/japanese-wood-jewelry.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/en/journal/japanese-wood-jewelry.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://kumiki.fomusglobal.com/journal/hinoki-jewelry.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kumiki.fomusglobal.com/en/journal/japanese-wood-jewelry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kumiki.fomusglobal.com/en/journal/japanese-wood-jewelry.html"/>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kumiki.fomusglobal.com/journal/traditional-craft-jewelry.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

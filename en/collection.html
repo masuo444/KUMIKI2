@@ -374,6 +374,46 @@
       font-size: 11px;
       letter-spacing: .22em;
     }
+    .product-price {
+      margin-top: 18px;
+      font-size: 1.02rem;
+      letter-spacing: .08em;
+    }
+    .product-price span {
+      color: var(--muted);
+      font-size: .76rem;
+      margin-left: 8px;
+      letter-spacing: .04em;
+    }
+    .dark .product-price span { color: rgba(255,255,255,.55); }
+    .product-buy {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-top: 14px;
+    }
+    .product-buy a { margin-top: 0; }
+    .order-btn {
+      appearance: none;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold);
+      padding: 10px 26px;
+      font-size: 11px;
+      letter-spacing: .22em;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .3s, color .3s;
+    }
+    .order-btn:hover { background: var(--gold); color: #fff; }
+    .order-btn:disabled { opacity: .5; cursor: wait; }
+    .grid-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: .82rem;
+      line-height: 1.9;
+      letter-spacing: .06em;
+    }
     .inquiry {
       padding: clamp(92px, 12vw, 150px) 0;
       background: #0f0f0f;
@@ -506,78 +546,91 @@
             <button class="filter-button" type="button" data-filter="badge" aria-pressed="false">Badge</button>
           </div>
         </div>
+        <p class="grid-note">Every piece is handcrafted to order in Japan — ships in 2–4 weeks. Free worldwide shipping, tracked & insured.</p>
         <div class="product-grid">
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="SAKURA Pierce — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/sakura-pierce-product.webp" alt="SAKURA Pierce"><img class="wear-photo wear-left" src="../images/generated-luxury-all/sakura-pierce-worn.webp" alt="SAKURA Pierce worn photo" loading="lazy"></div>
             <h3>SAKURA Pierce</h3>
             <p>White cherry blossom and hinoki. A quiet echo of Japan, at the ear.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20SAKURA%20Pierce">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-sakura-pierce">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="MIZU Drop Earrings — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/mizu-drop-earrings-product.webp" alt="MIZU Drop Earrings"><img class="wear-photo wear-left" src="../images/generated-luxury-all/mizu-drop-earrings-worn.webp" alt="MIZU Drop Earrings worn photo" loading="lazy"></div>
             <h3>MIZU Drop Earrings</h3>
             <p>Clear drops and gold thread. Light shimmers within the hinoki masu.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20MIZU%20Drop%20Earrings">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-mizu-drop-earrings">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="White Blossom Earrings — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/white-blossom-earrings-product.webp" alt="White Blossom Earrings"><img class="wear-photo wear-left" src="../images/generated-luxury-all/white-blossom-earrings-wear.webp" alt="White Blossom Earrings worn photo" loading="lazy"></div>
             <h3>White Blossom Earrings</h3>
             <p>White beads and gold fittings. Soft, gentle space at the ear.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20White%20Blossom%20Earrings">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-white-blossom-earrings">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="Black Blossom Earrings — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/black-blossom-earrings-product.webp" alt="Black Blossom Earrings"><img class="wear-photo wear-left" src="../images/generated-luxury-all/black-blossom-earrings-wear.webp" alt="Black Blossom Earrings worn photo" loading="lazy"></div>
             <h3>Black Blossom Earrings</h3>
             <p>The resonance of black and gold. One piece that leaves a quiet impression.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Black%20Blossom%20Earrings">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-black-blossom-earrings">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="Red Blossom Earrings — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/red-blossom-earrings-product.webp" alt="Red Blossom Earrings"><img class="wear-photo wear-left" src="../images/generated-luxury-all/red-blossom-earrings-wear.webp" alt="Red Blossom Earrings worn photo" loading="lazy"></div>
             <h3>Red Blossom Earrings</h3>
             <p>A red floral bead, kindling gentle warmth in hinoki.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Red%20Blossom%20Earrings">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-red-blossom-earrings">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="Yellow Flower Earrings — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/yellow-flower-earrings-product.webp" alt="Yellow Flower Earrings"><img class="wear-photo wear-left" src="../images/generated-luxury-all/yellow-flower-earrings-wear.webp" alt="Yellow Flower Earrings worn photo" loading="lazy"></div>
             <h3>Yellow Flower Earrings</h3>
             <p>Floral fittings and hinoki. Restrained brightness, quiet elegance.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Yellow%20Flower%20Earrings">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-yellow-flower-earrings">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="Silver Flower Pierce — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/silver-flower-pierce-product.webp" alt="Silver Flower Pierce"><img class="wear-photo wear-left" src="../images/generated-luxury-all/silver-flower-pierce-wear.webp" alt="Silver Flower Pierce worn photo" loading="lazy"></div>
             <h3>Silver Flower Pierce</h3>
             <p>A flower cradling a pearl. Silver light and the stillness of hinoki.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Silver%20Flower%20Pierce">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-silver-flower-pierce">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="White Temari Pierce — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/white-temari-pierce-product.webp" alt="White Temari Pierce"><img class="wear-photo wear-left" src="../images/generated-luxury-all/white-temari-pierce-worn.webp" alt="White Temari Pierce worn photo" loading="lazy"></div>
             <h3>White Temari Pierce</h3>
             <p>White temari ball and gold fittings. Soft, gentle space at the ear.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20White%20Temari%20Pierce">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-white-temari-pierce">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="earwear">
             <div class="product-photo" tabindex="0" aria-label="Blue Tonbodama Pierce — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/blue-tonbodama-pierce-product.webp" alt="Blue Tonbodama Pierce"><img class="wear-photo wear-left" src="../images/generated-luxury-all/blue-tonbodama-pierce-wear.webp" alt="Blue Tonbodama Pierce worn photo" loading="lazy"></div>
             <h3>Blue Tonbodama Pierce</h3>
             <p>Deep blue tonbodama glass bead. Japanese glass, quietly swaying.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Blue%20Tonbodama%20Pierce">Inquire</a>
+            <p class="product-price">&yen;66,000 <span>approx. US$410 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-blue-tonbodama-pierce">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="necklace">
             <div class="product-photo" tabindex="0" aria-label="Yellow Masu Necklace — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/yellow-masu-necklace-product.webp" alt="Yellow Masu Necklace"><img class="wear-photo wear-top" src="../images/generated-luxury-all/yellow-masu-necklace-wear.webp" alt="Yellow Masu Necklace worn photo" loading="lazy"></div>
             <h3>Yellow Masu Necklace</h3>
             <p>The warmth of gold and hinoki. The signature piece of KUMIKI.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Gold%20Masu%20Necklace">Inquire</a>
+            <p class="product-price">&yen;88,000 <span>approx. US$545 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-yellow-masu-necklace">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="necklace">
             <div class="product-photo" tabindex="0" aria-label="White Masu Necklace — View worn photo"><img class="work-photo" src="../images/generated-luxury-all/white-masu-necklace-product.webp" alt="White Masu Necklace"><img class="wear-photo wear-top" src="../images/generated-luxury-all/white-masu-necklace-wear.webp" alt="White Masu Necklace worn photo" loading="lazy"></div>
             <h3>White Masu Necklace</h3>
             <p>A silver outline, a quiet masu. Restrained light, composed expression.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Silver%20Masu%20Necklace">Inquire</a>
+            <p class="product-price">&yen;88,000 <span>approx. US$545 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-white-masu-necklace">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="kanzashi">
             <div class="product-photo" tabindex="0" aria-label="Masu Kanzashi — View styling image"><img class="work-photo" src="../images/generated-luxury-all/masu-kanzashi-product.webp" alt="Masu Kanzashi"><img class="wear-photo" src="../images/generated-luxury-all/masu-kanzashi-wear.webp" alt="Masu Kanzashi styling image" loading="lazy"></div>
             <h3>Masu Kanzashi</h3>
             <p>Open-work chrysanthemum and natural stone. The presence of hinoki, lingering in the hair.</p>
-            <a href="mailto:contact@fomus.jp?subject=KUMIKI%20Masu%20Kanzashi">Inquire</a>
+            <p class="product-price">&yen;77,000 <span>approx. US$480 &middot; free worldwide shipping</span></p>
+            <div class="product-buy"><a class="order-btn" href="https://shop.fomus.jp/en/shop/kumiki-masu-kanzashi">Order</a><a href="index.html#contact">Questions?</a></div>
           </article>
           <article class="product" data-category="badge">
             <div class="product-photo has-alt" tabindex="0" aria-label="Masu Badge — View worn photo"><img class="work-photo" src="../images/products/masu-badge.jpg" alt="Masu Badge"><img class="wear-photo" src="../images/products/masu-badge-men.jpg" alt="Masu Badge worn photo (men)" loading="lazy"><img class="wear-photo-alt" src="../images/products/masu-badge-women.jpg" alt="Masu Badge worn photo (women)" loading="lazy"></div>
@@ -597,7 +650,7 @@
           <p>Tell us the category or piece that interests you. We will personally guide you on materials, fittings, finish, and delivery.</p>
         </div>
         <div>
-          <a class="button" href="mailto:contact@fomus.jp?subject=KUMIKI%20Collection%20Inquiry">Get in Touch</a>
+          <a class="button" href="index.html#contact">Get in Touch</a>
         </div>
       </div>
     </section>
@@ -605,6 +658,7 @@
 
   <footer class="footer">
     <span>KUMIKI by FOMUS</span>
+    <a href="journal/index.html">Journal</a>
     <span>contact@fomus.jp</span>
   </footer>
   <script>
